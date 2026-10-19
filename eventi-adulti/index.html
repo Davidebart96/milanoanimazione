@@ -1,1 +1,756 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Milano Animazione</title><meta name="robots" content="noindex"><link rel="stylesheet" href="../assets/css/style.css"></head><body><main class="section"><div class="container center"><p class="eyebrow">Milano Animazione</p><h1>Pagina in costruzione</h1><p>Questa pagina è predisposta per il contenuto definitivo.</p><a class="btn btn-primary" href="/">Torna alla Home</a></div></main></body></html>
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Eventi Adulti a Milano | Magia ai Tavoli, Cantanti e DJ</title>
+  <meta name="description" content="Organizza un evento per adulti originale con Milano Animazione: magia ai tavoli, cantanti, DJ, musica dal vivo e intrattenimento per feste private e aziendali.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://milanoanimazione.it/eventi-adulti/">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .adult-events {
+      --gold: #d6ad63;
+      --dark: #171725;
+      --text: #30303d;
+      --muted: #6b6b79;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      overflow: hidden;
+    }
+
+    .adult-events * {
+      box-sizing: border-box;
+    }
+
+    .adult-events img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .adult-events a {
+      text-decoration: none;
+    }
+
+    .adult-events .ae-container {
+      width: min(1160px, 92%);
+      margin: 0 auto;
+    }
+
+    .adult-events .ae-hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(15, 15, 28, .94), rgba(15, 15, 28, .65) 55%, rgba(15, 15, 28, .25)),
+        url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
+    }
+
+    .adult-events .ae-hero-content {
+      max-width: 760px;
+      padding: 90px 0;
+    }
+
+    .adult-events .ae-eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .adult-events h1,
+    .adult-events h2,
+    .adult-events h3,
+    .adult-events p {
+      margin-top: 0;
+    }
+
+    .adult-events h1 {
+      color: #fff;
+      font-size: clamp(38px, 6vw, 66px);
+      line-height: 1.08;
+      margin-bottom: 24px;
+      letter-spacing: -1.5px;
+    }
+
+    .adult-events .ae-hero p {
+      max-width: 660px;
+      color: #eeeef3;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .adult-events .ae-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .adult-events .ae-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 23px;
+      min-height: 50px;
+      border-radius: 5px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+    }
+
+    .adult-events .ae-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .adult-events .ae-btn-primary {
+      color: #1c1a20;
+      background: var(--gold);
+    }
+
+    .adult-events .ae-btn-secondary {
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.7);
+    }
+
+    .adult-events .ae-section {
+      padding: 86px 0;
+    }
+
+    .adult-events .ae-section-light {
+      background: #f7f6f3;
+    }
+
+    .adult-events .ae-heading {
+      max-width: 760px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .adult-events .ae-heading h2 {
+      color: var(--dark);
+      font-size: clamp(29px, 4vw, 43px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .adult-events .ae-heading p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .adult-events .ae-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .adult-events .ae-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(20, 20, 35, .07);
+      border: 1px solid #eceaf0;
+    }
+
+    .adult-events .ae-card-image {
+      height: 235px;
+      overflow: hidden;
+      background: #e8e5df;
+    }
+
+    .adult-events .ae-card-image img {
+      transition: transform .4s;
+    }
+
+    .adult-events .ae-card:hover .ae-card-image img {
+      transform: scale(1.04);
+    }
+
+    .adult-events .ae-card-body {
+      padding: 25px;
+    }
+
+    .adult-events .ae-card h3 {
+      color: var(--dark);
+      font-size: 22px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .adult-events .ae-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .adult-events .ae-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .adult-events .ae-feature-image {
+      height: 460px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #e8e5df;
+    }
+
+    .adult-events .ae-feature-copy h2 {
+      color: var(--dark);
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .adult-events .ae-feature-copy p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .adult-events .ae-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 30px;
+    }
+
+    .adult-events .ae-checklist li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .adult-events .ae-checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #98702f;
+      font-weight: 900;
+    }
+
+    .adult-events .ae-dark {
+      color: #fff;
+      background: var(--dark);
+    }
+
+    .adult-events .ae-dark .ae-heading h2 {
+      color: #fff;
+    }
+
+    .adult-events .ae-dark .ae-heading p {
+      color: #d0cfda;
+    }
+
+    .adult-events .ae-dark .ae-card {
+      background: #222234;
+      border-color: #38384c;
+    }
+
+    .adult-events .ae-dark .ae-card h3 {
+      color: #fff;
+    }
+
+    .adult-events .ae-dark .ae-card p {
+      color: #d0cfda;
+    }
+
+    .adult-events .ae-number {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .adult-events .ae-occasion-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .adult-events .ae-occasion {
+      padding: 24px 18px;
+      border: 1px solid #e5e1d8;
+      border-radius: 9px;
+      background: #fff;
+    }
+
+    .adult-events .ae-occasion h3 {
+      color: var(--dark);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .adult-events .ae-occasion p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .adult-events .ae-cta {
+      padding: 75px 0;
+      color: #fff;
+      text-align: center;
+      background:
+        linear-gradient(rgba(23,23,37,.91), rgba(23,23,37,.91)),
+        url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+    }
+
+    .adult-events .ae-cta h2 {
+      color: #fff;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .adult-events .ae-cta p {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      color: #e5e4eb;
+      font-size: 17px;
+    }
+
+    .adult-events .ae-footer {
+      padding: 30px 0;
+      color: #d6d5df;
+      background: #11111c;
+      font-size: 14px;
+    }
+
+    .adult-events .ae-footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .adult-events .ae-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .adult-events .ae-footer a {
+      color: #fff;
+    }
+
+    .adult-events .ae-footer a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 900px) {
+      .adult-events .ae-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .adult-events .ae-feature {
+        gap: 30px;
+      }
+
+      .adult-events .ae-occasion-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .adult-events .ae-hero {
+        min-height: 570px;
+      }
+
+      .adult-events .ae-hero-content {
+        padding: 70px 0;
+      }
+
+      .adult-events .ae-hero p {
+        font-size: 16px;
+      }
+
+      .adult-events .ae-section {
+        padding: 60px 0;
+      }
+
+      .adult-events .ae-grid,
+      .adult-events .ae-feature,
+      .adult-events .ae-occasion-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .adult-events .ae-feature-image {
+        height: 300px;
+      }
+
+      .adult-events .ae-card-image {
+        height: 220px;
+      }
+
+      .adult-events .ae-footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .adult-events .ae-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="adult-events">
+
+    <!-- HERO -->
+    <section class="ae-hero">
+      <div class="ae-container">
+        <div class="ae-hero-content">
+          <span class="ae-eyebrow">Milano Animazione · Eventi per adulti</span>
+          <h1>Eventi adulti: magia, musica e spettacolo</h1>
+          <p>
+            Rendi speciale la tua festa con un intrattenimento capace di sorprendere
+            gli ospiti. Dalla magia ai tavoli ai DJ set, dai cantanti alla musica dal
+            vivo: troviamo insieme la soluzione più adatta al tuo evento.
+          </p>
+          <div class="ae-buttons">
+            <a class="ae-btn ae-btn-primary" href="../contatti/index.html">
+              Richiedi informazioni
+            </a>
+            <a class="ae-btn ae-btn-secondary" href="#servizi">
+              Scopri gli intrattenimenti
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="ae-section">
+      <div class="ae-container">
+        <div class="ae-heading">
+          <span class="ae-eyebrow">Il tuo evento, la tua atmosfera</span>
+          <h2>Intrattenimento pensato per coinvolgere tutti</h2>
+          <p>
+            Una cena elegante, una festa aziendale, un compleanno importante o una
+            celebrazione privata meritano momenti da ricordare. Proponiamo diverse
+            formule di intrattenimento, da combinare in base al pubblico, alla location
+            e allo stile della serata.
+          </p>
+        </div>
+
+        <div class="ae-grid" id="servizi">
+
+          <article class="ae-card">
+            <div class="ae-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80"
+                alt="Ricevimento elegante per un evento"
+                loading="lazy">
+            </div>
+            <div class="ae-card-body">
+              <h3>Magia ai tavoli</h3>
+              <p>
+                Un mago si avvicina ai gruppi di ospiti durante l'aperitivo, la cena
+                o il ricevimento e realizza effetti sorprendenti a distanza ravvicinata.
+                Carte, piccoli oggetti e illusioni diventano un'occasione per stupirsi,
+                ridere e rompere il ghiaccio.
+              </p>
+            </div>
+          </article>
+
+          <article class="ae-card">
+            <div class="ae-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=80"
+                alt="Concerto con cantante e pubblico"
+                loading="lazy">
+            </div>
+            <div class="ae-card-body">
+              <h3>Cantanti e musica dal vivo</h3>
+              <p>
+                La musica accompagna i momenti più importanti della serata.
+                In base alla disponibilità e alle esigenze, si possono valutare
+                cantanti e interpreti per creare un'atmosfera elegante, romantica
+                oppure più energica e coinvolgente.
+              </p>
+            </div>
+          </article>
+
+          <article class="ae-card">
+            <div class="ae-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1571266028243-d220c9c3b7d3?auto=format&fit=crop&w=900&q=80"
+                alt="DJ durante una festa con luci colorate"
+                loading="lazy">
+            </div>
+            <div class="ae-card-body">
+              <h3>DJ set e festa danzante</h3>
+              <p>
+                Dai grandi successi italiani alle hit internazionali, la musica
+                può accompagnare l'aperitivo, animare la festa e invitare gli ospiti
+                a ballare. La selezione musicale viene concordata in base al tipo
+                di pubblico e all'atmosfera desiderata.
+              </p>
+            </div>
+          </article>
+
+          <article class="ae-card">
+            <div class="ae-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80"
+                alt="Palco illuminato durante un evento musicale"
+                loading="lazy">
+            </div>
+            <div class="ae-card-body">
+              <h3>Musica e intrattenimento coordinati</h3>
+              <p>
+                Per chi desidera una serata dinamica, si può valutare una formula
+                che alterni musica, momenti di spettacolo e pause conviviali,
+                coordinando i diversi interventi con la scaletta dell'evento.
+              </p>
+            </div>
+          </article>
+
+          <article class="ae-card">
+            <div class="ae-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80"
+                alt="Persone riunite per un evento organizzato"
+                loading="lazy">
+            </div>
+            <div class="ae-card-body">
+              <h3>Eventi aziendali</h3>
+              <p>
+                Cene aziendali, anniversari, inaugurazioni e occasioni dedicate
+                a clienti o collaboratori possono essere arricchiti con interventi
+                di magia, musica e intrattenimento selezionati in base al contesto.
+              </p>
+            </div>
+          </article>
+
+          <article class="ae-card">
+            <div class="ae-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=900&q=80"
+                alt="Ospiti che festeggiano insieme"
+                loading="lazy">
+            </div>
+            <div class="ae-card-body">
+              <h3>Feste private e ricorrenze</h3>
+              <p>
+                Compleanni, anniversari, feste di laurea e celebrazioni speciali:
+                scegli un intrattenimento che rispecchi la personalità del festeggiato
+                e contribuisca a rendere la giornata diversa dal solito.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS MAGIA AI TAVOLI -->
+    <section class="ae-section ae-section-light">
+      <div class="ae-container">
+        <div class="ae-feature">
+          <div class="ae-feature-image">
+            <img
+              src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1100&q=85"
+              alt="Tavoli allestiti per una serata speciale"
+              loading="lazy">
+          </div>
+
+          <div class="ae-feature-copy">
+            <span class="ae-eyebrow">Un'esperienza ravvicinata</span>
+            <h2>La magia ai tavoli: stupore a pochi centimetri</h2>
+            <p>
+              La magia a distanza ravvicinata, chiamata anche close-up magic,
+              è ideale per sorprendere gli invitati senza interrompere il ritmo
+              della serata. Il prestigiatore si sposta tra i tavoli e propone
+              piccoli spettacoli direttamente davanti agli ospiti.
+            </p>
+            <p>
+              È una soluzione particolarmente adatta a cene, aperitivi, ricevimenti
+              ed eventi aziendali, perché favorisce la conversazione e crea un
+              momento condiviso anche tra persone che si conoscono poco.
+            </p>
+
+            <ul class="ae-checklist">
+              <li>Interventi brevi e distribuiti durante l'evento</li>
+              <li>Coinvolgimento diretto degli ospiti</li>
+              <li>Adatto a tavoli e gruppi di dimensioni diverse</li>
+              <li>Possibilità di coordinare la magia con la scaletta della serata</li>
+            </ul>
+
+            <a class="ae-btn ae-btn-primary" href="../contatti/index.html">
+              Chiedi informazioni sulla magia
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COME ORGANIZZARE -->
+    <section class="ae-section ae-dark">
+      <div class="ae-container">
+        <div class="ae-heading">
+          <span class="ae-eyebrow">Dall'idea alla serata</span>
+          <h2>Come scegliere l'intrattenimento giusto</h2>
+          <p>
+            Ogni evento ha esigenze diverse. Partiamo dalle tue indicazioni per
+            individuare una proposta coerente con la location, il programma e
+            l'atmosfera che vuoi creare.
+          </p>
+        </div>
+
+        <div class="ae-grid">
+          <article class="ae-card">
+            <div class="ae-card-body">
+              <span class="ae-number">01 · CONOSCIAMOCI</span>
+              <h3>Raccontaci il tuo evento</h3>
+              <p>
+                Indicaci data, luogo, numero indicativo di ospiti e tipo di
+                occasione. Queste informazioni aiutano a capire quale formula
+                può essere più adatta.
+              </p>
+            </div>
+          </article>
+
+          <article class="ae-card">
+            <div class="ae-card-body">
+              <span class="ae-number">02 · COSTRUIAMO</span>
+              <h3>Valutiamo le possibilità</h3>
+              <p>
+                Possiamo valutare magia ai tavoli, cantante, DJ o una combinazione
+                di intrattenimenti, in base alla disponibilità e alle caratteristiche
+                della location.
+              </p>
+            </div>
+          </article>
+
+          <article class="ae-card">
+            <div class="ae-card-body">
+              <span class="ae-number">03 · ORGANIZZIAMO</span>
+              <h3>Definiamo i dettagli</h3>
+              <p>
+                Concordiamo durata, orari, spazi e necessità tecniche, così da
+                pianificare gli interventi in armonia con il programma della festa.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OCCASIONI -->
+    <section class="ae-section ae-section-light">
+      <div class="ae-container">
+        <div class="ae-heading">
+          <span class="ae-eyebrow">Per tante occasioni</span>
+          <h2>Quale evento stai organizzando?</h2>
+          <p>
+            Raccontaci che tipo di serata hai in mente: possiamo valutare insieme
+            la soluzione di intrattenimento più adatta.
+          </p>
+        </div>
+
+        <div class="ae-occasion-grid">
+          <article class="ae-occasion">
+            <h3>Cene aziendali</h3>
+            <p>Magia ai tavoli e musica per rendere più piacevole la serata.</p>
+          </article>
+
+          <article class="ae-occasion">
+            <h3>Compleanni</h3>
+            <p>DJ, musica e momenti di spettacolo per festeggiare insieme.</p>
+          </article>
+
+          <article class="ae-occasion">
+            <h3>Anniversari</h3>
+            <p>Un accompagnamento musicale o un intrattenimento su misura.</p>
+          </article>
+
+          <article class="ae-occasion">
+            <h3>Inaugurazioni</h3>
+            <p>Accoglienza e intrattenimento per coinvolgere gli invitati.</p>
+          </article>
+
+          <article class="ae-occasion">
+            <h3>Feste private</h3>
+            <p>Una proposta da adattare allo stile della tua festa.</p>
+          </article>
+
+          <article class="ae-occasion">
+            <h3>Feste di laurea</h3>
+            <p>Musica e animazione per una celebrazione dinamica.</p>
+          </article>
+
+          <article class="ae-occasion">
+            <h3>Ricevimenti</h3>
+            <p>Interventi discreti durante aperitivi e momenti conviviali.</p>
+          </article>
+
+          <article class="ae-occasion">
+            <h3>Eventi speciali</h3>
+            <p>Parliamo della tua idea e valutiamo insieme le possibilità.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="ae-cta">
+      <div class="ae-container">
+        <span class="ae-eyebrow">Milano Animazione</span>
+        <h2>Stai organizzando un evento per adulti?</h2>
+        <p>
+          Raccontaci che cosa vuoi festeggiare e quale atmosfera desideri creare.
+          Ti aiuteremo a valutare le opzioni di intrattenimento più adatte,
+          dalla magia ai tavoli alla musica con DJ o cantante.
+        </p>
+        <div class="ae-buttons" style="justify-content:center;">
+          <a class="ae-btn ae-btn-primary" href="../contatti/index.html">
+            Contattaci per il tuo evento
+          </a>
+          <a class="ae-btn ae-btn-secondary" href="../index.html">
+            Torna alla homepage
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="ae-footer">
+      <div class="ae-container ae-footer-inner">
+        <div>
+          <strong>Milano Animazione</strong>
+          <div>Intrattenimento per eventi e occasioni speciali.</div>
+        </div>
+
+        <nav class="ae-footer-links" aria-label="Link utili">
+          <a href="../index.html">Home</a>
+          <a href="../eventi/index.html">Eventi aziendali</a>
+          <a href="../chi-siamo/index.html">Chi siamo</a>
+          <a href="../contatti/index.html">Contatti</a>
+          <a href="../privacy-policy/index.html">Privacy Policy</a>
+          <a href="../cookie-policy/index.html">Cookie Policy</a>
+        </nav>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
+```

@@ -1,1 +1,771 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Milano Animazione</title><meta name="robots" content="noindex"><link rel="stylesheet" href="../assets/css/style.css"></head><body><main class="section"><div class="container center"><p class="eyebrow">Milano Animazione</p><h1>Pagina in costruzione</h1><p>Questa pagina è predisposta per il contenuto definitivo.</p><a class="btn btn-primary" href="/">Torna alla Home</a></div></main></body></html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Feste di Compleanno per Bambini | Milano Animazione</title>
+  <meta name="description" content="Organizza una festa di compleanno per bambini con spettacoli di magia, giochi, baby dance, bolle di sapone e animazione personalizzata.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://milanoanimazione.it/feste-compleanno/">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    :root {
+      --fc-pink: #ff477e;
+      --fc-ink: #191625;
+      --fc-muted: #68657a;
+      --fc-soft: #f8f6fb;
+      --fc-line: #e9e3ef;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--fc-ink);
+      background: #fff;
+      font-family: inherit;
+    }
+
+    a { color: inherit; }
+
+    .fc-container {
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .fc-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--fc-pink);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .fc-eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      border-radius: 2px;
+      background: currentColor;
+    }
+
+    .fc-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 13px 23px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--fc-pink);
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .fc-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px #ff477e3d;
+    }
+
+    /* HERO */
+
+    .fc-hero {
+      padding: 82px 0 76px;
+      background:
+        radial-gradient(circle at 80% 20%, #ffe3ed 0, transparent 32%),
+        linear-gradient(135deg, #fbf8fd, #fff);
+    }
+
+    .fc-hero-grid {
+      display: grid;
+      grid-template-columns: 1.03fr .97fr;
+      align-items: center;
+      gap: 58px;
+    }
+
+    .fc-hero h1 {
+      max-width: 660px;
+      margin: 18px 0;
+      font-size: clamp(2.5rem, 5vw, 4.35rem);
+      line-height: 1.04;
+      letter-spacing: -.055em;
+    }
+
+    .fc-hero h1 span { color: var(--fc-pink); }
+
+    .fc-hero p {
+      max-width: 580px;
+      color: var(--fc-muted);
+      font-size: 1.08rem;
+      line-height: 1.8;
+    }
+
+    .fc-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .fc-hero-note {
+      margin-top: 18px;
+      font-size: .88rem !important;
+    }
+
+    .fc-hero-image { position: relative; }
+
+    .fc-hero-image img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 4.2;
+      object-fit: cover;
+      border-radius: 30px;
+      box-shadow: 0 24px 70px #21132a24;
+    }
+
+    .fc-image-tag {
+      position: absolute;
+      left: -18px;
+      bottom: 24px;
+      max-width: 230px;
+      padding: 16px 19px;
+      border: 1px solid #ffffffb8;
+      border-radius: 18px;
+      background: #ffffffed;
+      box-shadow: 0 12px 36px #21132a1c;
+    }
+
+    .fc-image-tag strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .fc-image-tag span {
+      color: var(--fc-muted);
+      font-size: .88rem;
+    }
+
+    /* SEZIONI */
+
+    .fc-section { padding: 82px 0; }
+    .fc-section-soft { background: var(--fc-soft); }
+
+    .fc-section-heading {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .fc-section-heading h2 {
+      margin: 14px 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -.04em;
+    }
+
+    .fc-section-heading p {
+      color: var(--fc-muted);
+      line-height: 1.8;
+    }
+
+    /* ATTIVITÀ */
+
+    .fc-service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .fc-service-card {
+      overflow: hidden;
+      border: 1px solid var(--fc-line);
+      border-radius: 23px;
+      background: #fff;
+      box-shadow: 0 12px 35px #23182d08;
+    }
+
+    .fc-service-card img {
+      display: block;
+      width: 100%;
+      height: 205px;
+      object-fit: cover;
+    }
+
+    .fc-service-content { padding: 23px; }
+
+    .fc-service-content h3 {
+      margin: 0 0 10px;
+      font-size: 1.22rem;
+    }
+
+    .fc-service-content p {
+      margin: 0 0 16px;
+      color: var(--fc-muted);
+      line-height: 1.7;
+      font-size: .96rem;
+    }
+
+    .fc-text-link {
+      color: var(--fc-pink);
+      font-size: .92rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .fc-text-link:hover { text-decoration: underline; }
+
+    /* SEZIONE PERSONALIZZAZIONE */
+
+    .fc-approach-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      align-items: center;
+      gap: 58px;
+    }
+
+    .fc-approach-image img {
+      display: block;
+      width: 100%;
+      min-height: 380px;
+      object-fit: cover;
+      border-radius: 28px;
+    }
+
+    .fc-approach-copy h2 {
+      margin: 14px 0;
+      font-size: clamp(2rem, 3.6vw, 2.9rem);
+      line-height: 1.12;
+      letter-spacing: -.04em;
+    }
+
+    .fc-approach-copy p {
+      color: var(--fc-muted);
+      line-height: 1.8;
+    }
+
+    .fc-check-list {
+      display: grid;
+      gap: 14px;
+      padding: 0;
+      margin: 25px 0 30px;
+      list-style: none;
+    }
+
+    .fc-check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.6;
+      font-weight: 650;
+    }
+
+    .fc-check-list li::before {
+      content: "✓";
+      flex: 0 0 25px;
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #ddf7eb;
+      color: #16855a;
+      font-weight: 900;
+    }
+
+    /* PASSAGGI */
+
+    .fc-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .fc-step {
+      padding: 25px;
+      border: 1px solid var(--fc-line);
+      border-radius: 20px;
+      background: #fff;
+    }
+
+    .fc-step-number {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      background: #ffe5ee;
+      color: var(--fc-pink);
+      font-size: 1.1rem;
+      font-weight: 900;
+    }
+
+    .fc-step h3 { margin: 0 0 9px; }
+
+    .fc-step p {
+      margin: 0;
+      color: var(--fc-muted);
+      line-height: 1.7;
+    }
+
+    /* FAQ */
+
+    .fc-faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .fc-faq details {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--fc-line);
+    }
+
+    .fc-faq summary {
+      cursor: pointer;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .fc-faq details p {
+      margin: 12px 0 0;
+      color: var(--fc-muted);
+      line-height: 1.8;
+    }
+
+    /* CTA FINALE */
+
+    .fc-cta {
+      padding: 66px 0;
+      background: linear-gradient(110deg, #fff0f5, #f5f0ff);
+    }
+
+    .fc-cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .fc-cta h2 {
+      max-width: 680px;
+      margin: 13px 0;
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -.04em;
+    }
+
+    .fc-cta p {
+      max-width: 670px;
+      margin-bottom: 0;
+      color: var(--fc-muted);
+      line-height: 1.8;
+    }
+
+    /* TABLET E MOBILE */
+
+    @media (max-width: 850px) {
+      .fc-hero-grid,
+      .fc-approach-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .fc-hero { padding-top: 54px; }
+      .fc-hero-image { max-width: 620px; }
+      .fc-image-tag { left: 12px; }
+
+      .fc-service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .fc-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .fc-container {
+        width: min(100% - 30px, 1160px);
+      }
+
+      .fc-section { padding: 58px 0; }
+
+      .fc-service-grid,
+      .fc-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .fc-hero h1 {
+        font-size: clamp(2.45rem, 12vw, 3.6rem);
+      }
+
+      .fc-hero-image img { aspect-ratio: 1 / 1; }
+      .fc-approach-image img { min-height: 270px; }
+      .fc-service-card img { height: 220px; }
+      .fc-cta { padding: 52px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <!-- HERO -->
+    <section class="fc-hero">
+      <div class="fc-container fc-hero-grid">
+
+        <div>
+          <span class="fc-eyebrow">Feste di compleanno</span>
+
+          <h1>
+            Un compleanno pieno di
+            <span>meraviglia.</span>
+          </h1>
+
+          <p>
+            Giochi, risate e uno spettacolo che lascia tutti a bocca
+            aperta. Progettiamo l’animazione in base all’età dei bambini,
+            allo spazio disponibile e all’atmosfera che vuoi creare.
+          </p>
+
+          <div class="fc-hero-actions">
+            <a class="fc-button" href="/contatti/">
+              Richiedi un preventivo ↗
+            </a>
+
+            <a class="fc-button"
+               href="#attivita"
+               style="color:var(--fc-ink);background:#fff;border:1px solid var(--fc-line);">
+              Scopri le attività
+            </a>
+          </div>
+
+          <p class="fc-hero-note">
+            Per feste in casa, in sala o all’aperto, quando lo spazio e
+            le condizioni lo consentono.
+          </p>
+        </div>
+
+        <div class="fc-hero-image">
+          <img
+            src="/assets/images/festa-compleanno-bambini.jpg"
+            alt="Bambini che festeggiano un compleanno con animazione"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1100&q=85';"
+          >
+
+          <div class="fc-image-tag">
+            <strong>Il momento più atteso?</strong>
+            <span>La magia che sorprende grandi e piccoli.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ATTIVITÀ -->
+    <section class="fc-section" id="attivita">
+      <div class="fc-container">
+
+        <div class="fc-section-heading">
+          <span class="fc-eyebrow">Una festa su misura</span>
+          <h2>Le attività che fanno brillare la festa</h2>
+          <p>
+            Possiamo costruire una proposta con una o più attività,
+            in base ai tuoi desideri, all’età dei partecipanti e alla
+            durata dell’evento.
+          </p>
+        </div>
+
+        <div class="fc-service-grid">
+
+          <article class="fc-service-card">
+            <img
+              src="/assets/images/spettacolo-magia-bambini.jpg"
+              alt="Spettacolo di magia per una festa di compleanno"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=900&q=80';"
+            >
+            <div class="fc-service-content">
+              <h3>Spettacolo di magia</h3>
+              <p>
+                Un momento sorprendente, pensato per coinvolgere i
+                bambini e trasformare il compleanno in un ricordo speciale.
+              </p>
+              <a class="fc-text-link" href="/spettacoli-di-magia/">
+                Scopri lo spettacolo ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="fc-service-card">
+            <img
+              src="/assets/images/giochi-animazione-bambini.jpg"
+              alt="Animatore coinvolge i bambini in giochi di gruppo"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80';"
+            >
+            <div class="fc-service-content">
+              <h3>Giochi e animazione</h3>
+              <p>
+                Giochi di gruppo, sfide divertenti e attività per far
+                partecipare i piccoli invitati e creare un clima allegro.
+              </p>
+              <a class="fc-text-link" href="/animazione-bambini/">
+                Scopri l’animazione ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="fc-service-card">
+            <img
+              src="/assets/images/baby-dance-compleanno.jpg"
+              alt="Bambini che ballano durante una festa"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=900&q=80';"
+            >
+            <div class="fc-service-content">
+              <h3>Baby dance</h3>
+              <p>
+                Musica, balli e coreografie semplici per muoversi,
+                ridere e divertirsi insieme agli amici.
+              </p>
+              <a class="fc-text-link" href="/animazione-bambini/">
+                Richiedi informazioni ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="fc-service-card">
+            <img
+              src="/assets/images/bolle-sapone-magia.jpg"
+              alt="Bolle di sapone scenografiche per una festa"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80';"
+            >
+            <div class="fc-service-content">
+              <h3>Magia e bolle di sapone</h3>
+              <p>
+                Effetti visivi e momenti di meraviglia per rendere
+                la festa ancora più scenografica.
+              </p>
+              <a class="fc-text-link" href="/spettacoli-di-magia/">
+                Scopri la magia ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="fc-service-card">
+            <img
+              src="/assets/images/truccabimbi-compleanno.jpg"
+              alt="Bambino con trucco colorato per una festa"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?auto=format&fit=crop&w=900&q=80';"
+            >
+            <div class="fc-service-content">
+              <h3>Truccabimbi</h3>
+              <p>
+                Colori e fantasia per trasformarsi in personaggi,
+                animali e creature immaginarie.
+              </p>
+              <a class="fc-text-link" href="/animazione-bambini/">
+                Richiedi informazioni ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="fc-service-card">
+            <img
+              src="/assets/images/palloncini-compleanno.jpg"
+              alt="Arco di palloncini colorati per un compleanno"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80';"
+            >
+            <div class="fc-service-content">
+              <h3>Palloncini e decorazioni</h3>
+              <p>
+                Dettagli colorati e composizioni di palloncini per
+                creare un angolo festa d’effetto.
+              </p>
+              <a class="fc-text-link" href="/contatti/">
+                Parliamone ↗
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LA FESTA SU MISURA -->
+    <section class="fc-section fc-section-soft">
+      <div class="fc-container fc-approach-grid">
+
+        <div class="fc-approach-image">
+          <img
+            src="/assets/images/bambini-che-giocano.jpg"
+            alt="Bambini che giocano insieme durante una festa"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1100&q=85';"
+          >
+        </div>
+
+        <div class="fc-approach-copy">
+          <span class="fc-eyebrow">La festa, come la immagini</span>
+
+          <h2>Ogni compleanno ha la sua personalità.</h2>
+
+          <p>
+            Ci racconti come immagini la giornata: pensiamo insieme a
+            una combinazione di attività adatta ai bambini presenti e
+            al tipo di festa che vuoi organizzare.
+          </p>
+
+          <ul class="fc-check-list">
+            <li>Attività valutate in base all’età e al numero dei bambini.</li>
+            <li>Possibilità di combinare spettacolo di magia, giochi e altre proposte.</li>
+            <li>Soluzioni da concordare per casa, sala o spazi all’aperto.</li>
+            <li>Organizzazione definita in base a data, luogo e durata dell’evento.</li>
+          </ul>
+
+          <a class="fc-button" href="/contatti/">
+            Parliamo della tua festa ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COME FUNZIONA -->
+    <section class="fc-section">
+      <div class="fc-container">
+
+        <div class="fc-section-heading">
+          <span class="fc-eyebrow">Semplice da organizzare</span>
+          <h2>Come iniziamo?</h2>
+          <p>
+            Bastano alcune informazioni per capire insieme quale
+            proposta può funzionare meglio.
+          </p>
+        </div>
+
+        <div class="fc-steps">
+
+          <article class="fc-step">
+            <div class="fc-step-number">1</div>
+            <h3>Ci racconti l’idea</h3>
+            <p>
+              Indicaci la data, il luogo, l’età dei bambini e il numero
+              indicativo degli invitati.
+            </p>
+          </article>
+
+          <article class="fc-step">
+            <div class="fc-step-number">2</div>
+            <h3>Scegliamo le attività</h3>
+            <p>
+              Valutiamo insieme lo spettacolo e le attività più adatte
+              allo spazio e al programma.
+            </p>
+          </article>
+
+          <article class="fc-step">
+            <div class="fc-step-number">3</div>
+            <h3>Definiamo i dettagli</h3>
+            <p>
+              Concordiamo durata, orari e organizzazione in base
+              alle esigenze della festa.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="fc-section fc-section-soft">
+      <div class="fc-container">
+
+        <div class="fc-section-heading">
+          <span class="fc-eyebrow">Le domande più comuni</span>
+          <h2>Prima di organizzare la festa</h2>
+        </div>
+
+        <div class="fc-faq">
+
+          <details>
+            <summary>Per quali età è adatta l’animazione?</summary>
+            <p>
+              Le attività si possono valutare in base all’età dei bambini,
+              al gruppo e al tipo di festa. Raccontaci chi parteciperà
+              per capire quale proposta è più indicata.
+            </p>
+          </details>
+
+          <details>
+            <summary>È possibile abbinare lo spettacolo di magia ai giochi?</summary>
+            <p>
+              Sì, possiamo valutare una proposta che combini lo spettacolo
+              con giochi, baby dance o altre attività disponibili,
+              in base ai tempi e allo spazio.
+            </p>
+          </details>
+
+          <details>
+            <summary>La festa può svolgersi in casa o all’aperto?</summary>
+            <p>
+              Possiamo valutare diverse location. La scelta delle attività
+              dipende dallo spazio, dalle condizioni del luogo e dalle
+              caratteristiche dello spettacolo.
+            </p>
+          </details>
+
+          <details>
+            <summary>Come posso ricevere un preventivo?</summary>
+            <p>
+              Vai alla pagina contatti e indicaci data, luogo, numero
+              ed età indicativa dei bambini, oltre alle attività che
+              ti interessano.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INVITO FINALE -->
+    <section class="fc-cta">
+      <div class="fc-container fc-cta-inner">
+
+        <div>
+          <span class="fc-eyebrow">Prepariamo qualcosa di speciale</span>
+
+          <h2>
+            Il prossimo compleanno indimenticabile potrebbe essere il tuo.
+          </h2>
+
+          <p>
+            Raccontaci la tua idea: valutiamo insieme lo spettacolo di
+            magia e le attività più adatte alla festa.
+          </p>
+        </div>
+
+        <a class="fc-button" href="/contatti/">
+          Richiedi un preventivo ↗
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,1 +1,642 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Milano Animazione</title><meta name="robots" content="noindex"><link rel="stylesheet" href="../assets/css/style.css"></head><body><main class="section"><div class="container center"><p class="eyebrow">Milano Animazione</p><h1>Pagina in costruzione</h1><p>Questa pagina è predisposta per il contenuto definitivo.</p><a class="btn btn-primary" href="/">Torna alla Home</a></div></main></body></html>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chi siamo | Milano Animazione</title>
+  <meta name="description" content="Scopri Milano Animazione: animazione per bambini, feste di compleanno, spettacoli di magia, giochi e momenti speciali a Milano e dintorni.">
+
+  <link rel="canonical" href="https://milanoanimazione.it/chi-siamo/">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .about-page {
+      --about-pink: #ff3f7f;
+      --about-dark: #191725;
+      --about-text: #55516a;
+      --about-light: #f8f5fb;
+      color: var(--about-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      overflow: hidden;
+    }
+
+    .about-page * {
+      box-sizing: border-box;
+    }
+
+    .about-container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .about-hero {
+      padding: 76px 0 86px;
+      background:
+        radial-gradient(ellipse at 90% 10%, #ffe2ed 0, transparent 36%),
+        linear-gradient(135deg, #fcf9ff, #fff 75%);
+    }
+
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 64px;
+    }
+
+    .about-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      color: var(--about-pink);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .about-eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      border-radius: 5px;
+      background: var(--about-pink);
+    }
+
+    .about-page h1,
+    .about-page h2,
+    .about-page h3 {
+      color: var(--about-dark);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+    }
+
+    .about-page h1 {
+      max-width: 620px;
+      margin: 0 0 24px;
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 800;
+    }
+
+    .about-highlight {
+      color: var(--about-pink);
+    }
+
+    .about-page p {
+      color: var(--about-text);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .about-hero-copy > p {
+      max-width: 570px;
+      margin: 0 0 26px;
+    }
+
+    .about-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .about-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 23px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s, background .2s;
+    }
+
+    .about-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .about-btn-primary {
+      background: var(--about-pink);
+      color: #fff;
+    }
+
+    .about-btn-primary:hover {
+      background: #e92c6b;
+      color: #fff;
+    }
+
+    .about-btn-secondary {
+      border-color: #e8deef;
+      background: #fff;
+      color: var(--about-dark);
+    }
+
+    .about-hero-visual {
+      position: relative;
+      min-width: 0;
+    }
+
+    .about-hero-visual img {
+      display: block;
+      width: 100%;
+      height: 490px;
+      object-fit: cover;
+      border-radius: 30px;
+      box-shadow: 0 25px 60px #21152a18;
+    }
+
+    .about-photo-note {
+      position: absolute;
+      right: -18px;
+      bottom: 24px;
+      max-width: 250px;
+      padding: 20px 22px;
+      border: 1px solid #ffffffa8;
+      border-radius: 20px;
+      background: #ffffffef;
+      box-shadow: 0 12px 35px #24142a16;
+    }
+
+    .about-photo-note strong {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
+
+    .about-photo-note p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .about-section {
+      padding: 84px 0;
+    }
+
+    .about-section-light {
+      background: var(--about-light);
+    }
+
+    .about-section-heading {
+      max-width: 720px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
+
+    .about-section-heading h2 {
+      margin: 0 0 18px;
+      font-size: clamp(32px, 4vw, 46px);
+    }
+
+    .about-section-heading p {
+      margin: 0;
+    }
+
+    .about-story-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-story-image img {
+      display: block;
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+      border-radius: 26px;
+    }
+
+    .about-story-copy h2 {
+      margin: 0 0 20px;
+      font-size: clamp(30px, 4vw, 43px);
+    }
+
+    .about-values {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .about-value {
+      padding: 22px;
+      border: 1px solid #eee6f2;
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .about-value-icon {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      margin-bottom: 15px;
+      border-radius: 14px;
+      background: #ffe4ee;
+      color: var(--about-pink);
+      font-size: 22px;
+    }
+
+    .about-value h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: -.3px;
+    }
+
+    .about-value p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .about-services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .about-service {
+      padding: 28px;
+      border: 1px solid #eee5f0;
+      border-radius: 22px;
+      background: #fff;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .about-service:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 35px #20112b0d;
+    }
+
+    .about-service-number {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--about-pink);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .about-service h3 {
+      margin: 0 0 12px;
+      font-size: 21px;
+      letter-spacing: -.5px;
+    }
+
+    .about-service p {
+      margin: 0 0 18px;
+      font-size: 14px;
+    }
+
+    .about-service a {
+      color: var(--about-pink);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .about-service a:hover {
+      text-decoration: underline;
+    }
+
+    .about-cta {
+      padding: 76px 0;
+      background:
+        radial-gradient(ellipse at 90% 0%, #ffb9d2 0, transparent 38%),
+        var(--about-dark);
+      text-align: center;
+    }
+
+    .about-cta h2 {
+      max-width: 720px;
+      margin: 0 auto 18px;
+      color: #fff;
+      font-size: clamp(32px, 4vw, 48px);
+    }
+
+    .about-cta p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #e5dfeb;
+    }
+
+    .about-cta .about-btn {
+      margin-top: 25px;
+    }
+
+    .about-footer {
+      padding: 28px 0;
+      background: #13111d;
+      color: #e9e4ef;
+      text-align: center;
+    }
+
+    .about-footer p {
+      margin: 0;
+      color: #e9e4ef;
+      font-size: 13px;
+    }
+
+    .about-footer a {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 850px) {
+      .about-hero-grid,
+      .about-story-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .about-hero {
+        padding: 54px 0 65px;
+      }
+
+      .about-hero-visual {
+        max-width: 600px;
+      }
+
+      .about-hero-visual img {
+        height: 420px;
+      }
+
+      .about-photo-note {
+        right: 12px;
+      }
+
+      .about-story-image img {
+        height: 390px;
+      }
+
+      .about-services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .about-container {
+        width: min(100% - 32px, 1120px);
+      }
+
+      .about-page h1 {
+        font-size: 42px;
+      }
+
+      .about-hero-visual img {
+        height: 340px;
+        border-radius: 22px;
+      }
+
+      .about-photo-note {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        max-width: none;
+        margin: -25px 12px 0;
+      }
+
+      .about-section {
+        padding: 60px 0;
+      }
+
+      .about-values,
+      .about-services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-story-image img {
+        height: 330px;
+      }
+
+      .about-buttons {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .about-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="about-page">
+
+    <!-- HERO -->
+    <section class="about-hero">
+      <div class="about-container about-hero-grid">
+
+        <div class="about-hero-copy">
+          <span class="about-eyebrow">Chi siamo</span>
+
+          <h1>
+            Creiamo momenti
+            <span class="about-highlight">da ricordare.</span>
+          </h1>
+
+          <p>
+            Milano Animazione porta gioco, creatività e meraviglia
+            nelle feste e negli eventi. Ogni occasione è diversa:
+            per questo le attività vengono pensate in base all'età
+            dei partecipanti, allo spazio disponibile e all'atmosfera
+            che vuoi creare.
+          </p>
+
+          <div class="about-buttons">
+            <a class="about-btn about-btn-primary" href="../contatti/index.html">
+              Raccontaci la tua idea ↗
+            </a>
+
+            <a class="about-btn about-btn-secondary" href="#cosa-facciamo">
+              Scopri cosa facciamo
+            </a>
+          </div>
+        </div>
+
+        <div class="about-hero-visual">
+          <img
+            src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1100&q=85"
+            alt="Decorazioni colorate per una festa di compleanno"
+            fetchpriority="high"
+          >
+
+          <div class="about-photo-note">
+            <strong>Ogni festa ha la sua magia.</strong>
+            <p>Idee, sorrisi e attività da scegliere in base alla tua occasione.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STORIA E APPROCCIO -->
+    <section class="about-section">
+      <div class="about-container about-story-grid">
+
+        <div class="about-story-image">
+          <img
+            src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1000&q=85"
+            alt="Bambino che gioca all'aperto"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="about-story-copy">
+          <span class="about-eyebrow">Il nostro approccio</span>
+
+          <h2>Non una festa qualsiasi. <span class="about-highlight">La tua festa.</span></h2>
+
+          <p>
+            Crediamo che una bella animazione nasca dall'ascolto.
+            Prima di scegliere le attività, è importante capire
+            chi parteciperà, quale occasione si festeggia e quale
+            tipo di esperienza desideri creare.
+          </p>
+
+          <p>
+            Per questo puoi valutare diverse proposte, dal gioco
+            di gruppo allo spettacolo di magia, fino alla musica
+            e alle attività creative. Insieme possiamo individuare
+            una soluzione adatta al tuo evento.
+          </p>
+
+          <div class="about-values">
+            <div class="about-value">
+              <div class="about-value-icon" aria-hidden="true">♡</div>
+              <h3>Attenzione</h3>
+              <p>Attività da valutare in base all'età e al gruppo di partecipanti.</p>
+            </div>
+
+            <div class="about-value">
+              <div class="about-value-icon" aria-hidden="true">✦</div>
+              <h3>Creatività</h3>
+              <p>Idee diverse per rendere speciale ogni occasione.</p>
+            </div>
+
+            <div class="about-value">
+              <div class="about-value-icon" aria-hidden="true">◎</div>
+              <h3>Flessibilità</h3>
+              <p>Proposte da concordare in base al luogo e allo spazio.</p>
+            </div>
+
+            <div class="about-value">
+              <div class="about-value-icon" aria-hidden="true">✓</div>
+              <h3>Organizzazione</h3>
+              <p>Dettagli da definire insieme prima del giorno dell'evento.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVIZI -->
+    <section class="about-section about-section-light" id="cosa-facciamo">
+      <div class="about-container">
+
+        <div class="about-section-heading">
+          <span class="about-eyebrow">Le nostre proposte</span>
+          <h2>Un mondo di attività da scoprire.</h2>
+          <p>
+            Scegli il tipo di festa che hai in mente e scopri
+            le attività che puoi valutare per il tuo evento.
+          </p>
+        </div>
+
+        <div class="about-services-grid">
+
+          <article class="about-service">
+            <span class="about-service-number">01 / COMPLEANNI</span>
+            <h3>Feste di compleanno</h3>
+            <p>Giochi, animazione e idee per organizzare una festa adatta ai piccoli invitati.</p>
+            <a href="../feste-compleanno/index.html">Scopri le feste ↗</a>
+          </article>
+
+          <article class="about-service">
+            <span class="about-service-number">02 / MAGIA</span>
+            <h3>Spettacoli di magia</h3>
+            <p>Un momento di stupore da inserire nella festa, in base agli spazi e all'età.</p>
+            <a href="../spettacoli-di-magia/index.html">Scopri la magia ↗</a>
+          </article>
+
+          <article class="about-service">
+            <span class="about-service-number">03 / BAMBINI</span>
+            <h3>Animazione bambini</h3>
+            <p>Giochi e attività per coinvolgere i partecipanti e creare un clima allegro.</p>
+            <a href="../animazione-bambini/index.html">Scopri l'animazione ↗</a>
+          </article>
+
+          <article class="about-service">
+            <span class="about-service-number">04 / EVENTI</span>
+            <h3>Eventi per adulti</h3>
+            <p>Proposte di intrattenimento da valutare per occasioni e contesti differenti.</p>
+            <a href="../eventi-adulti/index.html">Scopri le proposte ↗</a>
+          </article>
+
+          <article class="about-service">
+            <span class="about-service-number">05 / OCCASIONI</span>
+            <h3>Eventi speciali</h3>
+            <p>Raccontaci il tipo di evento e valutiamo insieme le attività più adatte.</p>
+            <a href="../eventi/index.html">Scopri gli eventi ↗</a>
+          </article>
+
+          <article class="about-service">
+            <span class="about-service-number">06 / CONTATTI</span>
+            <h3>Progettiamo insieme</h3>
+            <p>Condividi data, luogo e idea della festa per richiedere informazioni.</p>
+            <a href="../contatti/index.html">Contattaci ↗</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="about-cta">
+      <div class="about-container">
+        <span class="about-eyebrow">Il prossimo evento</span>
+
+        <h2>Hai un'idea per una festa? <span class="about-highlight">Parliamone.</span></h2>
+
+        <p>
+          Raccontaci che cosa vuoi organizzare. Potremo valutare insieme
+          le attività, la data, il luogo e le esigenze del tuo evento.
+        </p>
+
+        <a class="about-btn about-btn-primary" href="../contatti/index.html">
+          Richiedi informazioni ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="about-footer">
+      <div class="about-container">
+        <p>
+          © <span id="about-year"></span> Milano Animazione
+          · <a href="../index.html">Home</a>
+          · <a href="../privacy-policy/index.html">Privacy Policy</a>
+          · <a href="../cookie-policy/index.html">Cookie Policy</a>
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("about-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,1 +1,710 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Milano Animazione</title><meta name="robots" content="noindex"><link rel="stylesheet" href="../assets/css/style.css"></head><body><main class="section"><div class="container center"><p class="eyebrow">Milano Animazione</p><h1>Pagina in costruzione</h1><p>Questa pagina è predisposta per il contenuto definitivo.</p><a class="btn btn-primary" href="/">Torna alla Home</a></div></main></body></html>
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Spettacoli di Magia a Milano | Milano Animazione</title>
+  <meta name="description" content="Scopri gli spettacoli di magia di Milano Animazione: illusioni, giochi interattivi e momenti sorprendenti per feste di compleanno, famiglie ed eventi.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://milanoanimazione.it/spettacoli-di-magia/">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .magic-page {
+      --magic-dark: #171725;
+      --magic-gold: #d6b36a;
+      --magic-text: #343442;
+      --magic-muted: #6b6b79;
+      color: var(--magic-text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      overflow: hidden;
+    }
+
+    .magic-page * {
+      box-sizing: border-box;
+    }
+
+    .magic-page img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .magic-page a {
+      text-decoration: none;
+    }
+
+    .magic-page .mg-container {
+      width: min(1160px, 92%);
+      margin: 0 auto;
+    }
+
+    .magic-page .mg-hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(16,16,29,.95), rgba(16,16,29,.72) 55%, rgba(16,16,29,.25)),
+        url("https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
+    }
+
+    .magic-page .mg-hero-content {
+      max-width: 760px;
+      padding: 85px 0;
+    }
+
+    .magic-page .mg-eyebrow {
+      display: inline-block;
+      color: var(--magic-gold);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .magic-page h1,
+    .magic-page h2,
+    .magic-page h3,
+    .magic-page p {
+      margin-top: 0;
+    }
+
+    .magic-page h1 {
+      color: #fff;
+      font-size: clamp(39px, 6vw, 67px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 23px;
+    }
+
+    .magic-page .mg-hero p {
+      max-width: 650px;
+      color: #e9e8f0;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .magic-page .mg-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .magic-page .mg-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      padding: 14px 23px;
+      border-radius: 5px;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+    }
+
+    .magic-page .mg-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .magic-page .mg-btn-primary {
+      background: var(--magic-gold);
+      color: #191724;
+    }
+
+    .magic-page .mg-btn-secondary {
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.7);
+    }
+
+    .magic-page .mg-section {
+      padding: 85px 0;
+    }
+
+    .magic-page .mg-light {
+      background: #f7f6f3;
+    }
+
+    .magic-page .mg-heading {
+      max-width: 760px;
+      text-align: center;
+      margin: 0 auto 42px;
+    }
+
+    .magic-page .mg-heading h2 {
+      color: var(--magic-dark);
+      font-size: clamp(29px, 4vw, 43px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .magic-page .mg-heading p {
+      color: var(--magic-muted);
+      font-size: 17px;
+    }
+
+    .magic-page .mg-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .magic-page .mg-card {
+      background: #fff;
+      border: 1px solid #eceaf0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(20,20,35,.06);
+    }
+
+    .magic-page .mg-card-image {
+      height: 235px;
+      background: #e6e2dc;
+      overflow: hidden;
+    }
+
+    .magic-page .mg-card-image img {
+      transition: transform .4s;
+    }
+
+    .magic-page .mg-card:hover .mg-card-image img {
+      transform: scale(1.04);
+    }
+
+    .magic-page .mg-card-body {
+      padding: 25px;
+    }
+
+    .magic-page .mg-card h3 {
+      color: var(--magic-dark);
+      font-size: 22px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .magic-page .mg-card p {
+      color: var(--magic-muted);
+      margin-bottom: 0;
+    }
+
+    .magic-page .mg-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .magic-page .mg-feature-image {
+      height: 450px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #e6e2dc;
+    }
+
+    .magic-page .mg-feature-copy h2 {
+      color: var(--magic-dark);
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .magic-page .mg-feature-copy p {
+      color: var(--magic-muted);
+      margin-bottom: 16px;
+    }
+
+    .magic-page .mg-list {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 28px;
+    }
+
+    .magic-page .mg-list li {
+      position: relative;
+      padding-left: 29px;
+      margin-bottom: 11px;
+    }
+
+    .magic-page .mg-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #ad853d;
+      font-weight: 900;
+    }
+
+    .magic-page .mg-dark {
+      color: #fff;
+      background: var(--magic-dark);
+    }
+
+    .magic-page .mg-dark .mg-heading h2 {
+      color: #fff;
+    }
+
+    .magic-page .mg-dark .mg-heading p {
+      color: #d4d3df;
+    }
+
+    .magic-page .mg-dark .mg-card {
+      background: #222234;
+      border-color: #39394c;
+    }
+
+    .magic-page .mg-dark .mg-card h3 {
+      color: #fff;
+    }
+
+    .magic-page .mg-dark .mg-card p {
+      color: #d4d3df;
+    }
+
+    .magic-page .mg-step {
+      color: var(--magic-gold);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .magic-page .mg-cta {
+      padding: 78px 0;
+      color: #fff;
+      text-align: center;
+      background:
+        linear-gradient(rgba(23,23,37,.93), rgba(23,23,37,.93)),
+        url("https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+    }
+
+    .magic-page .mg-cta h2 {
+      color: #fff;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .magic-page .mg-cta p {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      color: #e5e4ec;
+      font-size: 17px;
+    }
+
+    .magic-page .mg-footer {
+      padding: 30px 0;
+      color: #d8d7e0;
+      background: #11111c;
+      font-size: 14px;
+    }
+
+    .magic-page .mg-footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .magic-page .mg-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+    }
+
+    .magic-page .mg-footer a {
+      color: #fff;
+    }
+
+    .magic-page .mg-footer a:hover {
+      color: var(--magic-gold);
+    }
+
+    @media (max-width: 900px) {
+      .magic-page .mg-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .magic-page .mg-feature {
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .magic-page .mg-hero {
+        min-height: 560px;
+      }
+
+      .magic-page .mg-hero-content {
+        padding: 65px 0;
+      }
+
+      .magic-page .mg-hero p {
+        font-size: 16px;
+      }
+
+      .magic-page .mg-section {
+        padding: 60px 0;
+      }
+
+      .magic-page .mg-grid,
+      .magic-page .mg-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .magic-page .mg-feature-image {
+        height: 300px;
+      }
+
+      .magic-page .mg-card-image {
+        height: 220px;
+      }
+
+      .magic-page .mg-btn {
+        width: 100%;
+      }
+
+      .magic-page .mg-footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="magic-page">
+
+    <!-- HERO -->
+    <section class="mg-hero">
+      <div class="mg-container">
+        <div class="mg-hero-content">
+          <span class="mg-eyebrow">Milano Animazione · Spettacoli</span>
+          <h1>Spettacoli di magia che lasciano a bocca aperta</h1>
+          <p>
+            Illusioni sorprendenti, partecipazione e momenti indimenticabili.
+            Scopri le proposte di magia per feste di compleanno, bambini,
+            famiglie, eventi privati e occasioni aziendali.
+          </p>
+          <div class="mg-buttons">
+            <a class="mg-btn mg-btn-primary" href="../contatti/index.html">
+              Richiedi informazioni
+            </a>
+            <a class="mg-btn mg-btn-secondary" href="#spettacoli">
+              Scopri gli spettacoli
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="mg-section">
+      <div class="mg-container">
+        <div class="mg-heading">
+          <span class="mg-eyebrow">La meraviglia prende vita</span>
+          <h2>La magia trasforma una festa in un'esperienza speciale</h2>
+          <p>
+            Uno spettacolo di magia crea curiosità, sorpresa e divertimento.
+            Ogni proposta può essere valutata in base all'età del pubblico,
+            al numero degli invitati, allo spazio disponibile e al tipo di evento.
+          </p>
+        </div>
+
+        <div class="mg-grid" id="spettacoli">
+
+          <article class="mg-card">
+            <div class="mg-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=900&q=80"
+                alt="Spettacolo su un palco durante un evento"
+                loading="lazy">
+            </div>
+            <div class="mg-card-body">
+              <h3>Spettacoli per bambini</h3>
+              <p>
+                Un momento coinvolgente fatto di sorprese, gag e partecipazione.
+                I piccoli spettatori possono diventare protagonisti dello spettacolo
+                e vivere la magia insieme agli amici.
+              </p>
+            </div>
+          </article>
+
+          <article class="mg-card">
+            <div class="mg-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80"
+                alt="Evento organizzato in una location elegante"
+                loading="lazy">
+            </div>
+            <div class="mg-card-body">
+              <h3>Magia ai tavoli</h3>
+              <p>
+                Una formula ideale per aperitivi, cene e ricevimenti. Il mago
+                intrattiene piccoli gruppi con effetti ravvicinati, creando
+                occasioni di stupore e conversazione senza richiedere un grande palco.
+              </p>
+            </div>
+          </article>
+
+          <article class="mg-card">
+            <div class="mg-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=80"
+                alt="Pubblico riunito per assistere a uno spettacolo"
+                loading="lazy">
+            </div>
+            <div class="mg-card-body">
+              <h3>Intrattenimento per adulti</h3>
+              <p>
+                Magia, illusioni e momenti interattivi possono arricchire
+                compleanni, feste private, cene aziendali e celebrazioni
+                in cui si desidera sorprendere gli ospiti.
+              </p>
+            </div>
+          </article>
+
+          <article class="mg-card">
+            <div class="mg-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80"
+                alt="Luci e atmosfera durante un evento dal vivo"
+                loading="lazy">
+            </div>
+            <div class="mg-card-body">
+              <h3>Magia per eventi aziendali</h3>
+              <p>
+                Un intrattenimento originale per eventi aziendali, inaugurazioni,
+                meeting e occasioni dedicate a clienti e collaboratori,
+                da concordare in base al contesto.
+              </p>
+            </div>
+          </article>
+
+          <article class="mg-card">
+            <div class="mg-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=900&q=80"
+                alt="Persone che festeggiano insieme"
+                loading="lazy">
+            </div>
+            <div class="mg-card-body">
+              <h3>Magia per feste private</h3>
+              <p>
+                Compleanni, anniversari e feste di laurea possono diventare
+                ancora più particolari con un intervento magico pensato
+                per il pubblico presente.
+              </p>
+            </div>
+          </article>
+
+          <article class="mg-card">
+            <div class="mg-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80"
+                alt="Persone riunite per un evento speciale"
+                loading="lazy">
+            </div>
+            <div class="mg-card-body">
+              <h3>Magia e intrattenimento combinati</h3>
+              <p>
+                In base alla disponibilità, lo spettacolo può essere valutato
+                insieme ad altre attività di animazione per costruire un programma
+                più articolato e adatto alla tua festa.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COME FUNZIONA -->
+    <section class="mg-section mg-light">
+      <div class="mg-container">
+        <div class="mg-feature">
+          <div class="mg-feature-image">
+            <img
+              src="https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1100&q=85"
+              alt="Palco pronto per uno spettacolo"
+              loading="lazy">
+          </div>
+
+          <div class="mg-feature-copy">
+            <span class="mg-eyebrow">Stupore e partecipazione</span>
+            <h2>Non solo trucchi: un momento da vivere insieme</h2>
+            <p>
+              La magia funziona quando riesce a coinvolgere il pubblico.
+              Un buon ritmo, l'interazione e la scelta degli effetti contribuiscono
+              a creare un'esperienza piacevole per gli spettatori.
+            </p>
+            <p>
+              Per individuare la proposta più adatta è utile conoscere l'occasione,
+              l'età media degli ospiti, il numero dei partecipanti e gli spazi
+              in cui si svolgerà l'evento.
+            </p>
+
+            <ul class="mg-list">
+              <li>Proposta da valutare in base all'età del pubblico</li>
+              <li>Possibilità di spettacolo per un gruppo riunito</li>
+              <li>Formula ravvicinata per tavoli e piccoli gruppi</li>
+              <li>Organizzazione concordata con il programma della festa</li>
+            </ul>
+
+            <a class="mg-btn mg-btn-primary" href="../contatti/index.html">
+              Parliamo del tuo evento
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VANTAGGI -->
+    <section class="mg-section mg-dark">
+      <div class="mg-container">
+        <div class="mg-heading">
+          <span class="mg-eyebrow">Perché scegliere la magia</span>
+          <h2>Un intrattenimento versatile per tante occasioni</h2>
+          <p>
+            La formula può cambiare in base al luogo, al pubblico e al tipo
+            di festa. L'obiettivo è creare un momento coinvolgente, senza
+            perdere di vista le esigenze organizzative.
+          </p>
+        </div>
+
+        <div class="mg-grid">
+          <article class="mg-card">
+            <div class="mg-card-body">
+              <span class="mg-step">01 · COINVOLGIMENTO</span>
+              <h3>Il pubblico è protagonista</h3>
+              <p>
+                Gli ospiti possono essere invitati a partecipare, scegliere
+                elementi dello spettacolo e condividere la sorpresa.
+              </p>
+            </div>
+          </article>
+
+          <article class="mg-card">
+            <div class="mg-card-body">
+              <span class="mg-step">02 · FLESSIBILITÀ</span>
+              <h3>Una formula per ogni contesto</h3>
+              <p>
+                Si può valutare uno spettacolo per tutti gli invitati oppure
+                un intervento itinerante tra tavoli e gruppi.
+              </p>
+            </div>
+          </article>
+
+          <article class="mg-card">
+            <div class="mg-card-body">
+              <span class="mg-step">03 · RICORDI</span>
+              <h3>Un momento da ricordare</h3>
+              <p>
+                Lo stupore condiviso offre un'occasione per ridere, parlare
+                e vivere insieme qualcosa di diverso dal solito.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORGANIZZAZIONE -->
+    <section class="mg-section">
+      <div class="mg-container">
+        <div class="mg-heading">
+          <span class="mg-eyebrow">Organizziamo insieme</span>
+          <h2>Come richiedere uno spettacolo di magia</h2>
+          <p>
+            Pochi dettagli ci aiutano a comprendere la tua idea e a valutare
+            la soluzione più adatta alle caratteristiche dell'evento.
+          </p>
+        </div>
+
+        <div class="mg-grid">
+          <article class="mg-card">
+            <div class="mg-card-body">
+              <span class="mg-step">01 · RACCONTACI</span>
+              <h3>Che cosa festeggi?</h3>
+              <p>
+                Indicaci se si tratta di un compleanno, una festa per bambini,
+                una cena aziendale o un altro evento.
+              </p>
+            </div>
+          </article>
+
+          <article class="mg-card">
+            <div class="mg-card-body">
+              <span class="mg-step">02 · DEFINIAMO</span>
+              <h3>Il pubblico e la location</h3>
+              <p>
+                Condividi la data, il luogo, il numero indicativo di ospiti
+                e l'età dei partecipanti, se rilevante.
+              </p>
+            </div>
+          </article>
+
+          <article class="mg-card">
+            <div class="mg-card-body">
+              <span class="mg-step">03 · VALUTIAMO</span>
+              <h3>La formula più adatta</h3>
+              <p>
+                In base alle informazioni raccolte e alla disponibilità,
+                si può valutare la tipologia di spettacolo e la durata.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mg-cta">
+      <div class="mg-container">
+        <span class="mg-eyebrow">Milano Animazione</span>
+        <h2>Pronto a sorprendere i tuoi ospiti?</h2>
+        <p>
+          Contattaci per raccontarci la tua idea. Valuteremo insieme la proposta
+          di magia più adatta alla tua festa, al pubblico e alla location.
+        </p>
+        <div class="mg-buttons" style="justify-content:center;">
+          <a class="mg-btn mg-btn-primary" href="../contatti/index.html">
+            Richiedi informazioni
+          </a>
+          <a class="mg-btn mg-btn-secondary" href="../index.html">
+            Torna alla homepage
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mg-footer">
+      <div class="mg-container mg-footer-inner">
+        <div>
+          <strong>Milano Animazione</strong>
+          <div>Animazione e intrattenimento per eventi speciali.</div>
+        </div>
+
+        <nav class="mg-footer-links" aria-label="Link utili">
+          <a href="../index.html">Home</a>
+          <a href="../chi-siamo/index.html">Chi siamo</a>
+          <a href="../eventi/index.html">Eventi aziendali</a>
+          <a href="../eventi-adulti/index.html">Eventi adulti</a>
+          <a href="../contatti/index.html">Contatti</a>
+          <a href="../privacy-policy/index.html">Privacy</a>
+          <a href="../cookie-policy/index.html">Cookie Policy</a>
+        </nav>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
+```

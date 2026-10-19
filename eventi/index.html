@@ -1,1 +1,746 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Milano Animazione</title><meta name="robots" content="noindex"><link rel="stylesheet" href="../assets/css/style.css"></head><body><main class="section"><div class="container center"><p class="eyebrow">Milano Animazione</p><h1>Pagina in costruzione</h1><p>Questa pagina è predisposta per il contenuto definitivo.</p><a class="btn btn-primary" href="/">Torna alla Home</a></div></main></body></html>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Eventi Aziendali a Milano | Milano Animazione</title>
+  <meta name="description" content="Milano Animazione propone idee di intrattenimento per eventi aziendali, feste aziendali, team building, inaugurazioni e occasioni speciali a Milano e dintorni.">
+
+  <link rel="canonical" href="https://milanoanimazione.it/eventi/">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .corporate-page {
+      --corp-pink: #ff3f7f;
+      --corp-dark: #191725;
+      --corp-text: #625d70;
+      --corp-light: #f8f5fb;
+      color: var(--corp-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      overflow: hidden;
+    }
+
+    .corporate-page * {
+      box-sizing: border-box;
+    }
+
+    .corp-container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .corp-hero {
+      padding: 76px 0 82px;
+      background:
+        radial-gradient(ellipse at 90% 10%, #ffe1ed, transparent 38%),
+        linear-gradient(135deg, #fcf9ff, #fff);
+    }
+
+    .corp-hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .corp-eyebrow {
+      display: inline-block;
+      margin-bottom: 19px;
+      color: var(--corp-pink);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .corporate-page h1,
+    .corporate-page h2,
+    .corporate-page h3 {
+      color: var(--corp-dark);
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+
+    .corporate-page h1 {
+      margin: 0 0 24px;
+      font-size: clamp(40px, 5vw, 62px);
+    }
+
+    .corporate-page h2 {
+      margin: 0 0 18px;
+      font-size: clamp(30px, 4vw, 44px);
+    }
+
+    .corp-highlight {
+      color: var(--corp-pink);
+    }
+
+    .corporate-page p {
+      color: var(--corp-text);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .corp-hero-copy > p {
+      max-width: 570px;
+    }
+
+    .corp-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .corp-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 51px;
+      padding: 14px 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .2s, background .2s;
+    }
+
+    .corp-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .corp-button-primary {
+      background: var(--corp-pink);
+      color: #fff;
+    }
+
+    .corp-button-primary:hover {
+      background: #e92c6b;
+      color: #fff;
+    }
+
+    .corp-button-secondary {
+      border-color: #e8deef;
+      background: #fff;
+      color: var(--corp-dark);
+    }
+
+    .corp-hero-image {
+      position: relative;
+    }
+
+    .corp-hero-image img {
+      display: block;
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: 0 24px 60px #21152a18;
+    }
+
+    .corp-image-label {
+      position: absolute;
+      right: -14px;
+      bottom: 22px;
+      max-width: 260px;
+      padding: 20px;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 12px 35px #24142a18;
+    }
+
+    .corp-image-label strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    .corp-image-label p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .corp-section {
+      padding: 82px 0;
+    }
+
+    .corp-section-light {
+      background: var(--corp-light);
+    }
+
+    .corp-heading {
+      max-width: 730px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
+
+    .corp-heading h2 {
+      margin-bottom: 16px;
+    }
+
+    .corp-heading p {
+      margin: 0;
+    }
+
+    .corp-services {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .corp-card {
+      overflow: hidden;
+      border: 1px solid #eee6f0;
+      border-radius: 22px;
+      background: #fff;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .corp-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 35px #20112b0d;
+    }
+
+    .corp-card img {
+      display: block;
+      width: 100%;
+      height: 215px;
+      object-fit: cover;
+    }
+
+    .corp-card-body {
+      padding: 24px;
+    }
+
+    .corp-card h3 {
+      margin: 0 0 12px;
+      font-size: 21px;
+      letter-spacing: -.5px;
+    }
+
+    .corp-card p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .corp-why-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .corp-why-image img {
+      display: block;
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+      border-radius: 26px;
+    }
+
+    .corp-benefits {
+      display: grid;
+      gap: 18px;
+      margin-top: 27px;
+    }
+
+    .corp-benefit {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .corp-benefit-icon {
+      display: grid;
+      flex: 0 0 44px;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #ffe4ee;
+      color: var(--corp-pink);
+      font-size: 21px;
+    }
+
+    .corp-benefit h3 {
+      margin: 1px 0 6px;
+      font-size: 17px;
+      letter-spacing: -.3px;
+    }
+
+    .corp-benefit p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .corp-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .corp-step {
+      padding: 27px;
+      border: 1px solid #eee6f0;
+      border-radius: 20px;
+      background: #fff;
+    }
+
+    .corp-step-number {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      background: var(--corp-pink);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .corp-step h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .corp-step p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .corp-cta {
+      padding: 78px 0;
+      background:
+        radial-gradient(ellipse at 90% 0%, #ffb9d2, transparent 38%),
+        var(--corp-dark);
+      text-align: center;
+    }
+
+    .corp-cta h2 {
+      max-width: 760px;
+      margin: 0 auto 18px;
+      color: #fff;
+    }
+
+    .corp-cta p {
+      max-width: 660px;
+      margin: 0 auto;
+      color: #e6dfeb;
+    }
+
+    .corp-cta .corp-button {
+      margin-top: 27px;
+    }
+
+    .corp-footer {
+      padding: 26px 0;
+      background: #13111d;
+      text-align: center;
+    }
+
+    .corp-footer p {
+      margin: 0;
+      color: #eee8f4;
+      font-size: 13px;
+    }
+
+    .corp-footer a {
+      color: #fff;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 900px) {
+      .corp-hero-grid,
+      .corp-why-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .corp-services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .corp-hero-image img {
+        height: 400px;
+      }
+
+      .corp-why-image img {
+        height: 390px;
+      }
+
+      .corp-image-label {
+        right: 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .corp-container {
+        width: calc(100% - 32px);
+      }
+
+      .corp-hero {
+        padding: 50px 0 60px;
+      }
+
+      .corporate-page h1 {
+        font-size: 41px;
+      }
+
+      .corp-section {
+        padding: 58px 0;
+      }
+
+      .corp-services,
+      .corp-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .corp-hero-image img {
+        height: 300px;
+        border-radius: 20px;
+      }
+
+      .corp-image-label {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        max-width: none;
+        margin: -15px 12px 0;
+      }
+
+      .corp-why-image img {
+        height: 310px;
+      }
+
+      .corp-buttons {
+        flex-direction: column;
+      }
+
+      .corp-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="corporate-page">
+
+    <!-- HERO EVENTI AZIENDALI -->
+    <section class="corp-hero">
+      <div class="corp-container corp-hero-grid">
+
+        <div class="corp-hero-copy">
+          <span class="corp-eyebrow">Milano Animazione · Business Events</span>
+
+          <h1>
+            Eventi aziendali che
+            <span class="corp-highlight">lasciano il segno.</span>
+          </h1>
+
+          <p>
+            Un evento aziendale è un'occasione per riunire persone,
+            valorizzare un traguardo e creare nuove connessioni.
+            Milano Animazione ti aiuta a valutare idee di intrattenimento
+            per rendere il tuo evento più coinvolgente.
+          </p>
+
+          <p>
+            Dalle feste aziendali alle inaugurazioni, fino agli eventi
+            dedicati a dipendenti, clienti e famiglie: raccontaci
+            il tuo progetto e valutiamo insieme la soluzione più adatta.
+          </p>
+
+          <div class="corp-buttons">
+            <a class="corp-button corp-button-primary" href="../contatti/index.html">
+              Richiedi informazioni ↗
+            </a>
+
+            <a class="corp-button corp-button-secondary" href="#proposte">
+              Scopri le proposte
+            </a>
+          </div>
+        </div>
+
+        <div class="corp-hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=85"
+            alt="Allestimento elegante per un evento organizzato"
+            fetchpriority="high"
+          >
+
+          <div class="corp-image-label">
+            <strong>Il tuo evento, la tua identità.</strong>
+            <p>Idee di intrattenimento da valutare in base al pubblico e all'occasione.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROPOSTE -->
+    <section class="corp-section" id="proposte">
+      <div class="corp-container">
+
+        <div class="corp-heading">
+          <span class="corp-eyebrow">Le nostre proposte</span>
+          <h2>Un evento per ogni occasione professionale.</h2>
+          <p>
+            Ogni azienda ha obiettivi e partecipanti diversi.
+            Scopri alcune occasioni per cui possiamo valutare
+            attività di animazione e intrattenimento.
+          </p>
+        </div>
+
+        <div class="corp-services">
+
+          <article class="corp-card">
+            <img
+              src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80"
+              alt="Sala allestita per un evento aziendale"
+              loading="lazy"
+            >
+            <div class="corp-card-body">
+              <h3>Feste aziendali</h3>
+              <p>
+                Momenti di incontro per celebrare risultati, ricorrenze
+                o traguardi insieme a colleghi e collaboratori.
+              </p>
+            </div>
+          </article>
+
+          <article class="corp-card">
+            <img
+              src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=80"
+              alt="Persone che condividono un momento insieme"
+              loading="lazy"
+            >
+            <div class="corp-card-body">
+              <h3>Team building e attività di gruppo</h3>
+              <p>
+                Idee per favorire la partecipazione e creare occasioni
+                di collaborazione tra colleghi.
+              </p>
+            </div>
+          </article>
+
+          <article class="corp-card">
+            <img
+              src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80"
+              alt="Organizzazione di una conferenza o di un incontro professionale"
+              loading="lazy"
+            >
+            <div class="corp-card-body">
+              <h3>Meeting e incontri aziendali</h3>
+              <p>
+                Soluzioni di intrattenimento da integrare in incontri,
+                convention e giornate dedicate all'azienda.
+              </p>
+            </div>
+          </article>
+
+          <article class="corp-card">
+            <img
+              src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=80"
+              alt="Tavolo apparecchiato per una cena o una celebrazione"
+              loading="lazy"
+            >
+            <div class="corp-card-body">
+              <h3>Cene e ricorrenze aziendali</h3>
+              <p>
+                Attività da valutare per anniversari, cene di fine anno
+                e occasioni speciali da condividere.
+              </p>
+            </div>
+          </article>
+
+          <article class="corp-card">
+            <img
+              src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80"
+              alt="Festa con decorazioni e invitati"
+              loading="lazy"
+            >
+            <div class="corp-card-body">
+              <h3>Eventi per famiglie e dipendenti</h3>
+              <p>
+                Se l'occasione coinvolge anche i bambini, possiamo
+                valutare attività dedicate ai più piccoli.
+              </p>
+            </div>
+          </article>
+
+          <article class="corp-card">
+            <img
+              src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=900&q=80"
+              alt="Evento con pubblico e allestimento"
+              loading="lazy"
+            >
+            <div class="corp-card-body">
+              <h3>Inaugurazioni e occasioni speciali</h3>
+              <p>
+                Proposte da concordare per aperture, presentazioni,
+                celebrazioni e appuntamenti rivolti ai clienti.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRATTENIMENTO -->
+    <section class="corp-section corp-section-light">
+      <div class="corp-container corp-why-grid">
+
+        <div class="corp-why-image">
+          <img
+            src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1000&q=85"
+            alt="Persone riunite per un evento"
+            loading="lazy"
+          >
+        </div>
+
+        <div>
+          <span class="corp-eyebrow">Intrattenimento su misura</span>
+
+          <h2>Il dettaglio che rende un evento più coinvolgente.</h2>
+
+          <p>
+            L'intrattenimento giusto dipende dal contesto, dagli spazi
+            e dalle persone presenti. Possiamo valutare insieme quali
+            attività inserire nel programma e come adattarle
+            all'occasione.
+          </p>
+
+          <div class="corp-benefits">
+
+            <div class="corp-benefit">
+              <div class="corp-benefit-icon" aria-hidden="true">✦</div>
+              <div>
+                <h3>Spettacoli di magia</h3>
+                <p>Un momento di sorpresa per rendere speciale una pausa o una celebrazione.</p>
+              </div>
+            </div>
+
+            <div class="corp-benefit">
+              <div class="corp-benefit-icon" aria-hidden="true">◎</div>
+              <div>
+                <h3>Attività per gruppi</h3>
+                <p>Idee da valutare per coinvolgere i partecipanti in modo attivo.</p>
+              </div>
+            </div>
+
+            <div class="corp-benefit">
+              <div class="corp-benefit-icon" aria-hidden="true">♡</div>
+              <div>
+                <h3>Intrattenimento per famiglie</h3>
+                <p>Se sono presenti bambini, possiamo valutare proposte dedicate a loro.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="corp-buttons">
+            <a class="corp-button corp-button-primary" href="../spettacoli-di-magia/index.html">
+              Scopri gli spettacoli ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COME LAVORIAMO -->
+    <section class="corp-section">
+      <div class="corp-container">
+
+        <div class="corp-heading">
+          <span class="corp-eyebrow">Come iniziare</span>
+          <h2>Dal primo contatto all'idea da realizzare.</h2>
+          <p>
+            Per valutare una proposta, partiamo dalle informazioni
+            essenziali del tuo evento.
+          </p>
+        </div>
+
+        <div class="corp-steps">
+
+          <article class="corp-step">
+            <div class="corp-step-number">1</div>
+            <h3>Raccontaci il progetto</h3>
+            <p>
+              Indicaci il tipo di evento, la data, il luogo e il numero
+              indicativo di partecipanti.
+            </p>
+          </article>
+
+          <article class="corp-step">
+            <div class="corp-step-number">2</div>
+            <h3>Valutiamo le esigenze</h3>
+            <p>
+              Esaminiamo l'occasione e le attività che potrebbero
+              essere adatte al pubblico e agli spazi.
+            </p>
+          </article>
+
+          <article class="corp-step">
+            <div class="corp-step-number">3</div>
+            <h3>Definiamo i dettagli</h3>
+            <p>
+              Possiamo concordare disponibilità, programma,
+              caratteristiche e costi della proposta.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="corp-cta">
+      <div class="corp-container">
+        <span class="corp-eyebrow">Parliamo del tuo evento</span>
+
+        <h2>Stai organizzando un evento aziendale a Milano?</h2>
+
+        <p>
+          Condividi la tua idea con Milano Animazione. Indicaci
+          l'occasione, la data e il tipo di intrattenimento che
+          stai cercando per ricevere informazioni.
+        </p>
+
+        <a class="corp-button corp-button-primary" href="../contatti/index.html">
+          Contattaci per informazioni ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="corp-footer">
+      <div class="corp-container">
+        <p>
+          © <span id="corp-year"></span> Milano Animazione
+          · <a href="../index.html">Home</a>
+          · <a href="../chi-siamo/index.html">Chi siamo</a>
+          · <a href="../contatti/index.html">Contatti</a>
+          · <a href="../privacy-policy/index.html">Privacy Policy</a>
+          · <a href="../cookie-policy/index.html">Cookie Policy</a>
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("corp-year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>

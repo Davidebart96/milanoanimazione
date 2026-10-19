@@ -1,1 +1,1192 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Milano Animazione</title><meta name="robots" content="noindex"><link rel="stylesheet" href="../assets/css/style.css"></head><body><main class="section"><div class="container center"><p class="eyebrow">Milano Animazione</p><h1>Pagina in costruzione</h1><p>Questa pagina è predisposta per il contenuto definitivo.</p><a class="btn btn-primary" href="/">Torna alla Home</a></div></main></body></html>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Animazione Bambini per Feste e Compleanni | Milano Animazione</title>
+
+  <meta name="description" content="Organizziamo animazione per bambini, compleanni e feste: giochi, baby dance, magia, bolle di sapone, truccabimbi e laboratori creativi. Richiedi un preventivo personalizzato.">
+
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ff477e">
+  <link rel="canonical" href="https://milanoanimazione.it/animazione-bambini/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Animazione Bambini | Milano Animazione">
+  <meta property="og:description" content="Feste per bambini ricche di giochi, magia, sorrisi e divertimento.">
+  <meta property="og:url" content="https://milanoanimazione.it/animazione-bambini/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=85">
+
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --pink: #ff477e;
+      --pink-dark: #ec316b;
+      --ink: #191724;
+      --muted: #686779;
+      --soft: #faf8fc;
+      --line: #ece7f2;
+      --purple: #7855d9;
+      --yellow: #ffd66b;
+      --green: #c9f0d8;
+      --radius: 24px;
+      --shadow: 0 18px 55px rgba(38, 24, 65, .09);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: inherit; text-decoration: none; }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    button, input, textarea, select { font: inherit; }
+
+    .ab-container {
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .ab-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid rgba(236,231,242,.85);
+      backdrop-filter: blur(16px);
+    }
+
+    .ab-nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .ab-logo {
+      font-family: "Nunito", sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 1.1;
+      letter-spacing: -.8px;
+    }
+
+    .ab-logo span { color: var(--pink); }
+
+    .ab-logo small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .ab-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .ab-nav-links a:not(.ab-btn):hover { color: var(--pink); }
+
+    .ab-btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--pink);
+      color: white;
+      font-weight: 800;
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform .2s, background .2s, box-shadow .2s;
+    }
+
+    .ab-btn:hover {
+      background: var(--pink-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(255,71,126,.23);
+    }
+
+    .ab-btn-outline {
+      background: white;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .ab-btn-outline:hover {
+      background: var(--soft);
+      color: var(--ink);
+    }
+
+    .ab-menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: white;
+      color: var(--ink);
+      font-size: 23px;
+      cursor: pointer;
+    }
+
+    .ab-hero {
+      overflow: hidden;
+      padding: 76px 0 86px;
+      background:
+        radial-gradient(ellipse at 7% 5%, rgba(255,214,107,.22), transparent 30%),
+        radial-gradient(ellipse at 95% 85%, rgba(201,240,216,.5), transparent 32%),
+        #faf8fc;
+    }
+
+    .ab-hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      align-items: center;
+      gap: 64px;
+    }
+
+    .ab-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--pink-dark);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .ab-eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      border-radius: 5px;
+      background: var(--pink);
+    }
+
+    .ab-hero h1 {
+      margin: 20px 0;
+      font-family: "Nunito", sans-serif;
+      font-size: clamp(42px, 5.2vw, 68px);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -2.8px;
+    }
+
+    .ab-highlight { color: var(--pink); }
+
+    .ab-lead {
+      max-width: 540px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .ab-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .ab-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+      margin-top: 28px;
+      color: #4d4a5d;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .ab-trust span::before {
+      content: "✓";
+      margin-right: 6px;
+      color: #24a568;
+      font-weight: 900;
+    }
+
+    .ab-hero-visual {
+      position: relative;
+      min-height: 450px;
+    }
+
+    .ab-hero-photo {
+      position: absolute;
+      inset: 0 12px 10px 15px;
+      overflow: hidden;
+      border-radius: 38px 38px 110px 38px;
+      background: #f0e8f6;
+      box-shadow: var(--shadow);
+    }
+
+    .ab-hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .ab-photo-label {
+      position: absolute;
+      right: -2px;
+      bottom: 34px;
+      max-width: 225px;
+      padding: 18px 22px;
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 20px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .ab-photo-label strong {
+      display: block;
+      font-family: "Nunito", sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.25;
+    }
+
+    .ab-photo-label span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .ab-section { padding: 88px 0; }
+
+    .ab-section-soft { background: var(--soft); }
+
+    .ab-section-head {
+      max-width: 720px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
+
+    .ab-section-head h2 {
+      margin: 14px 0;
+      font-family: "Nunito", sans-serif;
+      font-size: clamp(31px, 4vw, 46px);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -1.4px;
+    }
+
+    .ab-section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .ab-service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .ab-service-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .ab-service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .ab-service-img {
+      height: 215px;
+      overflow: hidden;
+      background: #f0e8f6;
+    }
+
+    .ab-service-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+
+    .ab-service-card:hover .ab-service-img img {
+      transform: scale(1.045);
+    }
+
+    .ab-service-body { padding: 24px; }
+
+    .ab-service-body h3 {
+      margin: 0 0 9px;
+      font-family: "Nunito", sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.25;
+    }
+
+    .ab-service-body p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .ab-text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 17px;
+      color: var(--pink-dark);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .ab-text-link:hover { text-decoration: underline; }
+
+    .ab-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .ab-split-photo {
+      overflow: hidden;
+      min-height: 430px;
+      border-radius: 32px;
+      background: #f0e8f6;
+      box-shadow: var(--shadow);
+    }
+
+    .ab-split-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+    }
+
+    .ab-split-copy h2 {
+      margin: 15px 0;
+      font-family: "Nunito", sans-serif;
+      font-size: clamp(32px, 4vw, 45px);
+      font-weight: 900;
+      line-height: 1.14;
+      letter-spacing: -1.4px;
+    }
+
+    .ab-split-copy > p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .ab-check-list {
+      display: grid;
+      gap: 14px;
+      margin: 25px 0 30px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ab-check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .ab-check {
+      display: inline-grid;
+      flex: 0 0 25px;
+      width: 25px;
+      height: 25px;
+      place-items: center;
+      border-radius: 50%;
+      background: #e0f7e9;
+      color: #218752;
+      font-weight: 900;
+    }
+
+    .ab-occasion-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .ab-occasion {
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: 23px;
+      background: white;
+    }
+
+    .ab-occasion-icon {
+      margin-bottom: auto;
+      font-size: 31px;
+    }
+
+    .ab-occasion h3 {
+      margin: 16px 0 5px;
+      font-family: "Nunito", sans-serif;
+      font-size: 19px;
+      font-weight: 900;
+      line-height: 1.25;
+    }
+
+    .ab-occasion p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .ab-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .ab-step {
+      padding: 29px;
+      border: 1px solid var(--line);
+      border-radius: 23px;
+      background: white;
+    }
+
+    .ab-step-number {
+      display: grid;
+      width: 49px;
+      height: 49px;
+      place-items: center;
+      margin-bottom: 20px;
+      border-radius: 16px;
+      background: #ffe3ec;
+      color: var(--pink-dark);
+      font-family: "Nunito", sans-serif;
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .ab-step:nth-child(2) .ab-step-number {
+      background: #e9e2ff;
+      color: var(--purple);
+    }
+
+    .ab-step:nth-child(3) .ab-step-number {
+      background: #e0f7e9;
+      color: #218752;
+    }
+
+    .ab-step h3 {
+      margin: 0 0 9px;
+      font-family: "Nunito", sans-serif;
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .ab-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .ab-faq {
+      display: grid;
+      gap: 12px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .ab-faq details {
+      padding: 20px 24px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: white;
+    }
+
+    .ab-faq summary {
+      position: relative;
+      padding-right: 28px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .ab-faq summary::-webkit-details-marker { display: none; }
+
+    .ab-faq summary::after {
+      content: "+";
+      position: absolute;
+      top: -3px;
+      right: 0;
+      color: var(--pink);
+      font-size: 23px;
+    }
+
+    .ab-faq details[open] summary::after { content: "−"; }
+
+    .ab-faq details p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .ab-cta {
+      padding: 75px 0;
+      background:
+        radial-gradient(circle at 0% 100%, rgba(255,214,107,.25), transparent 35%),
+        #211b35;
+      color: white;
+    }
+
+    .ab-cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+
+    .ab-cta h2 {
+      max-width: 650px;
+      margin: 12px 0;
+      font-family: "Nunito", sans-serif;
+      font-size: clamp(32px, 4vw, 47px);
+      font-weight: 900;
+      line-height: 1.13;
+      letter-spacing: -1.2px;
+    }
+
+    .ab-cta p {
+      max-width: 620px;
+      margin: 0;
+      color: #d7d1e4;
+    }
+
+    .ab-cta .ab-btn { flex-shrink: 0; }
+
+    .ab-footer {
+      padding: 35px 0;
+      background: #171323;
+      color: #e9e4f0;
+    }
+
+    .ab-footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .ab-footer p {
+      margin: 0;
+      color: #bcb5cb;
+      font-size: 12px;
+    }
+
+    .ab-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 12px;
+    }
+
+    .ab-footer-links a:hover { color: white; }
+
+    .ab-breadcrumbs {
+      padding: 17px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .ab-breadcrumbs a:hover { color: var(--pink); }
+
+    .ab-breadcrumbs span { margin: 0 7px; }
+
+    :focus-visible {
+      outline: 3px solid #7855d9;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 900px) {
+      .ab-hero-grid { gap: 35px; }
+      .ab-hero-visual { min-height: 390px; }
+      .ab-service-grid { grid-template-columns: repeat(2, 1fr); }
+      .ab-occasion-grid { grid-template-columns: repeat(2, 1fr); }
+      .ab-split { gap: 35px; }
+      .ab-nav-links { gap: 15px; }
+      .ab-nav-links > a:not(.ab-btn) { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .ab-container { width: min(100% - 32px, 500px); }
+      .ab-nav { min-height: 68px; }
+      .ab-menu-toggle { display: inline-grid; place-items: center; }
+
+      .ab-nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 20px 20px;
+        border-bottom: 1px solid var(--line);
+        background: white;
+      }
+
+      .ab-nav-links.ab-menu-open { display: flex; flex-direction: column; }
+      .ab-nav-links > a:not(.ab-btn) { display: block; padding: 11px 0; }
+      .ab-nav-links .ab-btn { margin-top: 8px; }
+
+      .ab-hero { padding: 48px 0 56px; }
+      .ab-hero-grid { grid-template-columns: 1fr; gap: 35px; }
+      .ab-hero h1 { font-size: clamp(40px, 11vw, 55px); letter-spacing: -1.7px; }
+      .ab-lead { font-size: 15px; }
+      .ab-hero-visual { min-height: 340px; }
+      .ab-hero-photo { inset: 0 9px 8px 0; border-radius: 26px 26px 75px 26px; }
+      .ab-photo-label { right: 0; bottom: 18px; max-width: 190px; padding: 14px 16px; }
+      .ab-photo-label strong { font-size: 16px; }
+
+      .ab-section { padding: 62px 0; }
+      .ab-section-head { margin-bottom: 30px; }
+      .ab-section-head h2 { font-size: 34px; }
+      .ab-service-grid { grid-template-columns: 1fr; gap: 17px; }
+      .ab-service-img { height: 220px; }
+      .ab-service-body { padding: 21px; }
+
+      .ab-split { grid-template-columns: 1fr; gap: 30px; }
+      .ab-split-photo, .ab-split-photo img { min-height: 300px; }
+      .ab-split-copy h2 { font-size: 35px; }
+
+      .ab-occasion-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
+      .ab-occasion { min-height: 165px; padding: 16px; }
+      .ab-occasion h3 { font-size: 17px; }
+
+      .ab-steps { grid-template-columns: 1fr; gap: 13px; }
+      .ab-step { padding: 23px; }
+
+      .ab-faq details { padding: 18px; }
+      .ab-cta { padding: 57px 0; }
+      .ab-cta-inner { align-items: flex-start; flex-direction: column; }
+      .ab-cta h2 { font-size: 35px; }
+
+      .ab-footer-inner { align-items: flex-start; flex-direction: column; }
+      .ab-footer-links { gap: 12px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Animazione per bambini",
+    "serviceType": "Animazione feste per bambini e compleanni",
+    "url": "https://milanoanimazione.it/animazione-bambini/",
+    "provider": {
+      "@type": "EntertainmentBusiness",
+      "name": "Milano Animazione",
+      "url": "https://milanoanimazione.it/"
+    },
+    "description": "Servizi di animazione per bambini con giochi, baby dance, magia, bolle di sapone, truccabimbi e laboratori creativi."
+  }
+  </script>
+</head>
+
+<body>
+
+  <header class="ab-header">
+    <div class="ab-container ab-nav">
+      <a class="ab-logo" href="../" aria-label="Milano Animazione, homepage">
+        Milano <span>Animazione</span>
+        <small>Feste da ricordare</small>
+      </a>
+
+      <button class="ab-menu-toggle" type="button"
+        aria-label="Apri il menu" aria-expanded="false"
+        aria-controls="ab-navigation">☰</button>
+
+      <nav class="ab-nav-links" id="ab-navigation" aria-label="Navigazione principale">
+        <a href="../">Home</a>
+        <a href="../#servizi">Servizi</a>
+        <a href="../eventi/">Eventi</a>
+        <a href="../chi-siamo/">Chi siamo</a>
+        <a href="../contatti/" class="ab-btn">Richiedi un preventivo ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="ab-container ab-breadcrumbs" aria-label="Percorso">
+      <a href="../">Home</a>
+      <span>›</span>
+      <span aria-current="page">Animazione bambini</span>
+    </nav>
+
+    <section class="ab-hero">
+      <div class="ab-container ab-hero-grid">
+        <div>
+          <span class="ab-eyebrow">Feste per piccoli grandi momenti</span>
+
+          <h1>
+            Il divertimento prende vita con
+            <span class="ab-highlight">l'animazione bambini.</span>
+          </h1>
+
+          <p class="ab-lead">
+            Giochi, risate, fantasia e tanta energia. Organizziamo
+            momenti speciali per rendere compleanni e feste per bambini
+            esperienze coinvolgenti, pensate per la loro età e per
+            il tipo di evento.
+          </p>
+
+          <div class="ab-hero-actions">
+            <a class="ab-btn" href="../contatti/">Organizza la tua festa ↗</a>
+            <a class="ab-btn ab-btn-outline" href="#servizi-bambini">Scopri i servizi</a>
+          </div>
+
+          <div class="ab-trust">
+            <span>Attività personalizzabili</span>
+            <span>Giochi per diverse età</span>
+            <span>Feste su misura</span>
+          </div>
+        </div>
+
+        <div class="ab-hero-visual">
+          <div class="ab-hero-photo">
+            <img
+              src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1100&q=85"
+              alt="Decorazioni colorate e palloncini per una festa"
+              fetchpriority="high">
+          </div>
+          <div class="ab-photo-label">
+            <strong>Ogni festa ha la sua magia ✨</strong>
+            <span>Idee, giochi e divertimento da condividere</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ab-section" id="servizi-bambini">
+      <div class="ab-container">
+        <div class="ab-section-head">
+          <span class="ab-eyebrow">Tante idee per divertirsi</span>
+          <h2>Un mondo di attività per ogni festa</h2>
+          <p>
+            Combiniamo attività diverse in base agli spazi, all'età
+            dei bambini, al numero di partecipanti e ai tuoi desideri.
+          </p>
+        </div>
+
+        <div class="ab-service-grid">
+          <article class="ab-service-card">
+            <div class="ab-service-img">
+              <img
+                src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80"
+                alt="Bambini che giocano e si divertono"
+                loading="lazy">
+            </div>
+            <div class="ab-service-body">
+              <h3>Giochi e animazione</h3>
+              <p>
+                Giochi di gruppo, sfide divertenti, attività di movimento
+                e momenti di collaborazione per coinvolgere i piccoli ospiti.
+              </p>
+              <a class="ab-text-link" href="../contatti/">Richiedi informazioni ↗</a>
+            </div>
+          </article>
+
+          <article class="ab-service-card">
+            <div class="ab-service-img">
+              <img
+                src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80"
+                alt="Atmosfera colorata per un evento speciale"
+                loading="lazy">
+            </div>
+            <div class="ab-service-body">
+              <h3>Baby dance</h3>
+              <p>
+                Musica, balli, coreografie semplici e momenti di gruppo
+                per liberare l'energia e divertirsi insieme.
+              </p>
+              <a class="ab-text-link" href="../contatti/">Richiedi informazioni ↗</a>
+            </div>
+          </article>
+
+          <article class="ab-service-card">
+            <div class="ab-service-img">
+              <img
+                src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80"
+                alt="Decorazioni e atmosfera di festa"
+                loading="lazy">
+            </div>
+            <div class="ab-service-body">
+              <h3>Magia e bolle di sapone</h3>
+              <p>
+                Effetti sorprendenti, momenti di meraviglia e bolle
+                scenografiche per rendere la festa ancora più speciale.
+              </p>
+              <a class="ab-text-link" href="../spettacoli-di-magia/">Scopri la magia ↗</a>
+            </div>
+          </article>
+
+          <article class="ab-service-card">
+            <div class="ab-service-img">
+              <img
+                src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=800&q=80"
+                alt="Regali e dettagli colorati per una festa"
+                loading="lazy">
+            </div>
+            <div class="ab-service-body">
+              <h3>Truccabimbi</h3>
+              <p>
+                Colori e fantasia per trasformarsi in personaggi
+                fantastici, animali e creature immaginarie.
+              </p>
+              <a class="ab-text-link" href="../contatti/">Richiedi informazioni ↗</a>
+            </div>
+          </article>
+
+          <article class="ab-service-card">
+            <div class="ab-service-img">
+              <img
+                src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
+                alt="Festa con luci e atmosfera festosa"
+                loading="lazy">
+            </div>
+            <div class="ab-service-body">
+              <h3>Palloncini e decorazioni</h3>
+              <p>
+                Sculture con palloncini e dettagli colorati per arricchire
+                l'atmosfera e creare ricordi divertenti.
+              </p>
+              <a class="ab-text-link" href="../contatti/">Richiedi informazioni ↗</a>
+            </div>
+          </article>
+
+          <article class="ab-service-card">
+            <div class="ab-service-img">
+              <img
+                src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=800&q=80"
+                alt="Materiali creativi per attività e laboratori"
+                loading="lazy">
+            </div>
+            <div class="ab-service-body">
+              <h3>Laboratori creativi</h3>
+              <p>
+                Attività manuali e idee creative per dare spazio
+                all'immaginazione e portare a casa un ricordo della festa.
+              </p>
+              <a class="ab-text-link" href="../contatti/">Richiedi informazioni ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ab-section ab-section-soft">
+      <div class="ab-container ab-split">
+        <div class="ab-split-photo">
+          <img
+            src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1000&q=85"
+            alt="Persone che condividono un momento speciale"
+            loading="lazy">
+        </div>
+
+        <div class="ab-split-copy">
+          <span class="ab-eyebrow">La festa, come la immagini</span>
+          <h2>Ogni bambino è diverso. Anche ogni festa dovrebbe esserlo.</h2>
+          <p>
+            Non esiste un'unica formula adatta a tutti. Partiamo dalle
+            tue idee e costruiamo una proposta che tenga conto dei
+            bambini presenti, dei loro interessi e del contesto della festa.
+          </p>
+
+          <ul class="ab-check-list">
+            <li><span class="ab-check">✓</span><span>Attività adattate alle fasce d'età e al gruppo.</span></li>
+            <li><span class="ab-check">✓</span><span>Possibilità di combinare più servizi.</span></li>
+            <li><span class="ab-check">✓</span><span>Proposte per feste in casa, in sala o all'aperto, quando lo spazio lo consente.</span></li>
+            <li><span class="ab-check">✓</span><span>Organizzazione concordata in base a data, luogo e durata dell'evento.</span></li>
+          </ul>
+
+          <a class="ab-btn" href="../contatti/">Parliamo della tua festa ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ab-section">
+      <div class="ab-container">
+        <div class="ab-section-head">
+          <span class="ab-eyebrow">Tante occasioni da festeggiare</span>
+          <h2>Per quali eventi puoi scegliere l'animazione?</h2>
+          <p>
+            Dalle feste in famiglia agli eventi con tanti piccoli ospiti:
+            raccontaci cosa stai organizzando.
+          </p>
+        </div>
+
+        <div class="ab-occasion-grid">
+          <article class="ab-occasion">
+            <span class="ab-occasion-icon" aria-hidden="true">🎂</span>
+            <h3>Compleanni</h3>
+            <p>Una festa speciale per il festeggiato e i suoi amici.</p>
+          </article>
+
+          <article class="ab-occasion">
+            <span class="ab-occasion-icon" aria-hidden="true">🎈</span>
+            <h3>Feste private</h3>
+            <p>Occasioni in famiglia, ricorrenze e incontri tra amici.</p>
+          </article>
+
+          <article class="ab-occasion">
+            <span class="ab-occasion-icon" aria-hidden="true">💍</span>
+            <h3>Matrimoni</h3>
+            <p>Attività dedicate ai bambini durante il ricevimento.</p>
+          </article>
+
+          <article class="ab-occasion">
+            <span class="ab-occasion-icon" aria-hidden="true">🏢</span>
+            <h3>Eventi aziendali</h3>
+            <p>Momenti di intrattenimento per le famiglie dei partecipanti.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ab-section ab-section-soft">
+      <div class="ab-container">
+        <div class="ab-section-head">
+          <span class="ab-eyebrow">Semplice e personalizzato</span>
+          <h2>Organizzare la festa è facile</h2>
+          <p>
+            Ci racconti la tua idea e definiamo insieme la soluzione
+            più adatta all'occasione.
+          </p>
+        </div>
+
+        <div class="ab-steps">
+          <article class="ab-step">
+            <div class="ab-step-number">1</div>
+            <h3>Raccontaci il tuo evento</h3>
+            <p>
+              Indicaci data, luogo, età dei bambini, numero indicativo
+              dei partecipanti e tipo di festa.
+            </p>
+          </article>
+
+          <article class="ab-step">
+            <div class="ab-step-number">2</div>
+            <h3>Scegliamo le attività</h3>
+            <p>
+              Valutiamo insieme giochi e servizi più adatti alle tue
+              esigenze e agli spazi disponibili.
+            </p>
+          </article>
+
+          <article class="ab-step">
+            <div class="ab-step-number">3</div>
+            <h3>Prepariamo la festa</h3>
+            <p>
+              Ricevi una proposta da valutare e concordiamo i dettagli
+              organizzativi prima dell'evento.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ab-section">
+      <div class="ab-container">
+        <div class="ab-section-head">
+          <span class="ab-eyebrow">Domande frequenti</span>
+          <h2>Tutto quello che vuoi sapere</h2>
+          <p>Qualche informazione utile per iniziare a organizzare la festa.</p>
+        </div>
+
+        <div class="ab-faq">
+          <details>
+            <summary>Per quali età è disponibile l'animazione?</summary>
+            <p>
+              Le attività possono essere adattate a diverse fasce d'età.
+              Quando ci contatti, indicaci quanti anni hanno i bambini
+              così possiamo valutare le proposte più adatte.
+            </p>
+          </details>
+
+          <details>
+            <summary>Quali servizi posso includere nella festa?</summary>
+            <p>
+              Puoi richiedere giochi, baby dance, magia, bolle di sapone,
+              truccabimbi, palloncini e laboratori creativi. La disponibilità
+              dei singoli servizi va concordata in base alla data e all'evento.
+            </p>
+          </details>
+
+          <details>
+            <summary>È possibile organizzare una festa in casa o all'aperto?</summary>
+            <p>
+              Sì, possiamo valutare diverse tipologie di location.
+              È importante comunicarci lo spazio disponibile e se la festa
+              si svolgerà all'interno o all'esterno.
+            </p>
+          </details>
+
+          <details>
+            <summary>Quanto costa l'animazione per bambini?</summary>
+            <p>
+              Il preventivo dipende dai servizi richiesti, dalla durata,
+              dal luogo e dalle caratteristiche dell'evento. Contattaci
+              con queste informazioni per ricevere una proposta personalizzata.
+            </p>
+          </details>
+
+          <details>
+            <summary>Con quanto anticipo devo prenotare?</summary>
+            <p>
+              Ti consigliamo di contattarci appena hai una data indicativa,
+              soprattutto per i periodi più richiesti. La disponibilità
+              viene confermata al momento della richiesta.
+            </p>
+          </details>
+
+          <details>
+            <summary>Come posso chiedere un preventivo?</summary>
+            <p>
+              Visita la pagina Contatti e raccontaci la tua festa:
+              data, luogo, numero ed età dei bambini e attività desiderate.
+              Potremo così valutare la richiesta.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="ab-cta">
+      <div class="ab-container ab-cta-inner">
+        <div>
+          <span class="ab-eyebrow">Iniziamo a organizzare</span>
+          <h2>La prossima festa indimenticabile potrebbe essere la tua.</h2>
+          <p>
+            Raccontaci la tua idea: troveremo insieme le attività più
+            adatte per creare un momento speciale.
+          </p>
+        </div>
+        <a class="ab-btn" href="../contatti/">Richiedi un preventivo ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ab-footer">
+    <div class="ab-container ab-footer-inner">
+      <div>
+        <a class="ab-logo" href="../" style="color:white">
+          Milano <span>Animazione</span>
+          <small>Feste da ricordare</small>
+        </a>
+        <p style="margin-top:14px">Animazione, spettacoli e intrattenimento per i tuoi eventi.</p>
+      </div>
+
+      <nav class="ab-footer-links" aria-label="Link utili">
+        <a href="../">Home</a>
+        <a href="../eventi/">Eventi</a>
+        <a href="../chi-siamo/">Chi siamo</a>
+        <a href="../contatti/">Contatti</a>
+        <a href="../privacy-policy/">Privacy Policy</a>
+        <a href="../cookie-policy/">Cookie Policy</a>
+      </nav>
+
+      <p>© <span id="ab-year">2026</span> Milano Animazione</p>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const menuButton = document.querySelector(".ab-menu-toggle");
+      const navigation = document.querySelector("#ab-navigation");
+
+      if (menuButton && navigation) {
+        menuButton.addEventListener("click", () => {
+          const isOpen = navigation.classList.toggle("ab-menu-open");
+          menuButton.setAttribute("aria-expanded", String(isOpen));
+          menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Chiudi il menu" : "Apri il menu"
+          );
+          menuButton.textContent = isOpen ? "×" : "☰";
+        });
+
+        navigation.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navigation.classList.remove("ab-menu-open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Apri il menu");
+            menuButton.textContent = "☰";
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            navigation.classList.remove("ab-menu-open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Apri il menu");
+            menuButton.textContent = "☰";
+          }
+        });
+      }
+
+      const year = document.querySelector("#ab-year");
+      if (year) year.textContent = new Date().getFullYear();
+    })();
+  </script>
+
+</body>
+</html>

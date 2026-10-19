@@ -1,1 +1,564 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Milano Animazione</title><meta name="robots" content="noindex"><link rel="stylesheet" href="../assets/css/style.css"></head><body><main class="section"><div class="container center"><p class="eyebrow">Milano Animazione</p><h1>Pagina in costruzione</h1><p>Questa pagina è predisposta per il contenuto definitivo.</p><a class="btn btn-primary" href="/">Torna alla Home</a></div></main></body></html>
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Privacy Policy | Milano Animazione</title>
+  <meta name="description" content="Consulta l'informativa sulla privacy di Milano Animazione e scopri come vengono trattati i dati personali degli utenti del sito.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://milanoanimazione.it/privacy-policy/">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .privacy-page {
+      --pp-dark: #191927;
+      --pp-gold: #caa45d;
+      --pp-text: #363644;
+      --pp-muted: #6c6c7a;
+      color: var(--pp-text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+    .privacy-page * {
+      box-sizing: border-box;
+    }
+
+    .privacy-page a {
+      color: #866321;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .privacy-page a:hover {
+      color: #513a0e;
+    }
+
+    .privacy-page .pp-container {
+      width: min(1000px, 92%);
+      margin: 0 auto;
+    }
+
+    .privacy-page .pp-hero {
+      padding: 75px 0 65px;
+      color: #fff;
+      background:
+        linear-gradient(120deg, rgba(23,23,39,.97), rgba(37,34,51,.93));
+      border-bottom: 4px solid var(--pp-gold);
+    }
+
+    .privacy-page .pp-eyebrow {
+      display: inline-block;
+      color: var(--pp-gold);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .privacy-page h1 {
+      color: #fff;
+      font-size: clamp(36px, 5vw, 54px);
+      line-height: 1.15;
+      margin: 0 0 18px;
+    }
+
+    .privacy-page .pp-hero p {
+      max-width: 740px;
+      color: #e4e3eb;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .privacy-page .pp-content {
+      padding: 60px 0 80px;
+    }
+
+    .privacy-page .pp-notice {
+      padding: 20px 23px;
+      margin-bottom: 35px;
+      background: #f8f5ee;
+      border-left: 4px solid var(--pp-gold);
+      border-radius: 5px;
+    }
+
+    .privacy-page .pp-notice strong {
+      display: block;
+      color: var(--pp-dark);
+      margin-bottom: 5px;
+    }
+
+    .privacy-page .pp-updated {
+      color: var(--pp-muted);
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .privacy-page .pp-section {
+      padding: 28px 0;
+      border-bottom: 1px solid #e9e7e2;
+      scroll-margin-top: 25px;
+    }
+
+    .privacy-page .pp-section h2 {
+      color: var(--pp-dark);
+      font-size: clamp(22px, 3vw, 29px);
+      line-height: 1.3;
+      margin: 0 0 15px;
+    }
+
+    .privacy-page .pp-section h3 {
+      color: var(--pp-dark);
+      font-size: 18px;
+      margin: 22px 0 8px;
+    }
+
+    .privacy-page .pp-section p {
+      margin: 0 0 14px;
+    }
+
+    .privacy-page .pp-section ul {
+      padding-left: 24px;
+      margin: 10px 0 18px;
+    }
+
+    .privacy-page .pp-section li {
+      margin-bottom: 8px;
+    }
+
+    .privacy-page .pp-toc {
+      padding: 25px;
+      margin-bottom: 30px;
+      border: 1px solid #e7e3da;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .privacy-page .pp-toc h2 {
+      color: var(--pp-dark);
+      font-size: 20px;
+      margin: 0 0 12px;
+    }
+
+    .privacy-page .pp-toc ul {
+      columns: 2;
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .privacy-page .pp-toc li {
+      margin-bottom: 7px;
+      break-inside: avoid;
+    }
+
+    .privacy-page .pp-contact {
+      padding: 25px;
+      margin-top: 30px;
+      border-radius: 8px;
+      background: #f7f6f3;
+    }
+
+    .privacy-page .pp-contact h2 {
+      color: var(--pp-dark);
+      margin-top: 0;
+    }
+
+    .privacy-page .pp-footer {
+      padding: 28px 0;
+      color: #d8d7e0;
+      background: #141420;
+      font-size: 14px;
+    }
+
+    .privacy-page .pp-footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .privacy-page .pp-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .privacy-page .pp-footer a {
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .privacy-page .pp-hero {
+        padding: 55px 0 45px;
+      }
+
+      .privacy-page .pp-content {
+        padding: 35px 0 55px;
+      }
+
+      .privacy-page .pp-toc ul {
+        columns: 1;
+      }
+
+      .privacy-page .pp-footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="privacy-page">
+
+    <!-- INTESTAZIONE -->
+    <header class="pp-hero">
+      <div class="pp-container">
+        <span class="pp-eyebrow">Milano Animazione</span>
+        <h1>Privacy Policy</h1>
+        <p>
+          Informativa sul trattamento dei dati personali degli utenti che
+          visitano il sito web Milano Animazione, ai sensi del Regolamento
+          (UE) 2016/679, noto come GDPR.
+        </p>
+      </div>
+    </header>
+
+    <div class="pp-content">
+      <div class="pp-container">
+
+        <div class="pp-notice">
+          <strong>Informazione importante</strong>
+          Questa pagina è un modello da completare e verificare prima della
+          pubblicazione. Le informazioni devono essere adattate al titolare
+          effettivo del sito, ai moduli presenti e agli strumenti tecnici
+          realmente utilizzati.
+        </div>
+
+        <p class="pp-updated">
+          Ultimo aggiornamento: 19 ottobre 2026
+        </p>
+
+        <!-- INDICE -->
+        <nav class="pp-toc" aria-label="Indice della Privacy Policy">
+          <h2>Indice dell'informativa</h2>
+          <ul>
+            <li><a href="#titolare">Titolare del trattamento</a></li>
+            <li><a href="#dati">Dati personali trattati</a></li>
+            <li><a href="#finalita">Finalità del trattamento</a></li>
+            <li><a href="#base-giuridica">Base giuridica</a></li>
+            <li><a href="#modalita">Modalità del trattamento</a></li>
+            <li><a href="#conservazione">Conservazione dei dati</a></li>
+            <li><a href="#destinatari">Destinatari dei dati</a></li>
+            <li><a href="#trasferimenti">Trasferimenti fuori dall'UE</a></li>
+            <li><a href="#diritti">Diritti dell'interessato</a></li>
+            <li><a href="#sicurezza">Sicurezza dei dati</a></li>
+            <li><a href="#minori">Minori</a></li>
+            <li><a href="#modifiche">Modifiche all'informativa</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+          </ul>
+        </nav>
+
+        <!-- 1 -->
+        <section class="pp-section" id="titolare">
+          <h2>1. Titolare del trattamento</h2>
+          <p>
+            Il titolare del trattamento è il soggetto che determina le finalità
+            e i mezzi del trattamento dei dati personali raccolti attraverso
+            questo sito.
+          </p>
+          <p>
+            <strong>Denominazione o nome e cognome:</strong>
+            [INSERIRE IL NOME DEL TITOLARE]
+          </p>
+          <p>
+            <strong>Sede o indirizzo:</strong>
+            [INSERIRE L'INDIRIZZO COMPLETO]
+          </p>
+          <p>
+            <strong>Email di contatto:</strong>
+            [INSERIRE L'EMAIL UFFICIALE]
+          </p>
+          <p>
+            <strong>Partita IVA, se applicabile:</strong>
+            [INSERIRE LA PARTITA IVA]
+          </p>
+          <p>
+            I dati sopra indicati devono essere compilati con le informazioni
+            corrette del titolare effettivo del sito Milano Animazione.
+          </p>
+        </section>
+
+        <!-- 2 -->
+        <section class="pp-section" id="dati">
+          <h2>2. Quali dati personali possono essere trattati</h2>
+          <p>
+            In base alle funzionalità effettivamente disponibili sul sito,
+            possono essere trattate le seguenti categorie di dati:
+          </p>
+
+          <h3>Dati forniti volontariamente</h3>
+          <p>
+            Se l'utente contatta il titolare o compila un modulo, possono essere
+            raccolti nome, indirizzo email, numero di telefono, informazioni
+            sull'evento richiesto e contenuto del messaggio.
+          </p>
+
+          <h3>Dati tecnici di navigazione</h3>
+          <p>
+            Durante la normale navigazione, i sistemi informatici e le procedure
+            software che consentono il funzionamento del sito possono acquisire
+            informazioni tecniche, come indirizzo IP, data e ora della richiesta,
+            risorsa richiesta e informazioni sul browser, nei limiti previsti
+            dalle configurazioni effettive del sito e dei suoi servizi.
+          </p>
+
+          <h3>Cookie e tecnologie simili</h3>
+          <p>
+            Il sito può utilizzare cookie o tecnologie simili. Le categorie,
+            le finalità e gli eventuali strumenti di terze parti devono essere
+            descritti in modo coerente con quelli realmente installati.
+            Per ulteriori informazioni, consulta la
+            <a href="../cookie-policy/index.html">Cookie Policy</a>.
+          </p>
+        </section>
+
+        <!-- 3 -->
+        <section class="pp-section" id="finalita">
+          <h2>3. Finalità del trattamento</h2>
+          <p>I dati personali possono essere trattati, ove applicabile, per:</p>
+          <ul>
+            <li>rispondere a richieste di informazioni ricevute dall'utente;</li>
+            <li>fornire informazioni sui servizi di animazione e intrattenimento;</li>
+            <li>gestire richieste di preventivo e contatti relativi agli eventi;</li>
+            <li>adempiere a obblighi di legge applicabili;</li>
+            <li>garantire la sicurezza e il corretto funzionamento del sito;</li>
+            <li>gestire eventuali contestazioni e tutelare i diritti del titolare;</li>
+            <li>gestire statistiche di navigazione, se sono presenti strumenti di analisi.</li>
+          </ul>
+          <p>
+            Eventuali attività promozionali o newsletter devono essere indicate
+            separatamente e svolte solo in presenza di un'adeguata base giuridica.
+          </p>
+        </section>
+
+        <!-- 4 -->
+        <section class="pp-section" id="base-giuridica">
+          <h2>4. Base giuridica del trattamento</h2>
+          <p>
+            Il trattamento viene effettuato sulla base giuridica applicabile
+            alla specifica finalità, secondo il GDPR. A seconda dei casi,
+            questa può essere:
+          </p>
+          <ul>
+            <li>
+              l'esecuzione di misure precontrattuali richieste dall'utente,
+              ad esempio per rispondere a una richiesta di preventivo;
+            </li>
+            <li>l'adempimento di obblighi legali;</li>
+            <li>il legittimo interesse del titolare, ove applicabile e dopo la necessaria valutazione;</li>
+            <li>il consenso dell'interessato, quando richiesto dalla legge, ad esempio per specifici cookie o comunicazioni promozionali.</li>
+          </ul>
+          <p>
+            Quando il trattamento si basa sul consenso, l'interessato può
+            revocarlo in qualsiasi momento, senza pregiudicare la liceità
+            del trattamento effettuato prima della revoca.
+          </p>
+        </section>
+
+        <!-- 5 -->
+        <section class="pp-section" id="modalita">
+          <h2>5. Modalità del trattamento</h2>
+          <p>
+            I dati sono trattati con strumenti informatici e, ove necessario,
+            con altre modalità idonee a garantirne la riservatezza e la sicurezza.
+            L'accesso deve essere limitato ai soggetti autorizzati e alle
+            informazioni necessarie per le rispettive attività.
+          </p>
+          <p>
+            Il titolare adotta misure di sicurezza adeguate ai rischi del
+            trattamento, tenendo conto delle caratteristiche dei dati e
+            dei sistemi effettivamente utilizzati.
+          </p>
+        </section>
+
+        <!-- 6 -->
+        <section class="pp-section" id="conservazione">
+          <h2>6. Tempi di conservazione</h2>
+          <p>
+            I dati personali vengono conservati per il tempo necessario a
+            conseguire le finalità per cui sono stati raccolti e nel rispetto
+            degli eventuali obblighi di legge.
+          </p>
+          <p>
+            Le richieste di informazioni possono essere conservate per il
+            periodo necessario alla loro gestione e per eventuali esigenze
+            connesse. I dati relativi a rapporti contrattuali e obblighi
+            amministrativi o fiscali sono conservati per i periodi previsti
+            dalla normativa applicabile.
+          </p>
+          <p>
+            I tempi effettivi devono essere definiti dal titolare in base
+            ai trattamenti realmente svolti e alle relative esigenze.
+          </p>
+        </section>
+
+        <!-- 7 -->
+        <section class="pp-section" id="destinatari">
+          <h2>7. Destinatari dei dati</h2>
+          <p>
+            I dati personali possono essere accessibili, nei limiti delle
+            rispettive competenze, a soggetti coinvolti nella gestione del sito
+            e delle richieste degli utenti.
+          </p>
+          <p>Se effettivamente utilizzati, tali soggetti possono includere:</p>
+          <ul>
+            <li>fornitori di hosting e infrastruttura informatica;</li>
+            <li>fornitori di servizi email e comunicazione;</li>
+            <li>consulenti e professionisti autorizzati;</li>
+            <li>fornitori di strumenti di analisi o servizi integrati nel sito;</li>
+            <li>autorità pubbliche, quando previsto dalla legge.</li>
+          </ul>
+          <p>
+            I fornitori effettivi e i rispettivi ruoli devono essere verificati
+            e indicati quando necessario. I dati non devono essere comunicati
+            a destinatari non autorizzati.
+          </p>
+        </section>
+
+        <!-- 8 -->
+        <section class="pp-section" id="trasferimenti">
+          <h2>8. Trasferimenti di dati fuori dallo Spazio Economico Europeo</h2>
+          <p>
+            Alcuni fornitori tecnologici potrebbero trattare dati in paesi
+            al di fuori dello Spazio Economico Europeo. Se ciò avviene,
+            il titolare deve verificare le condizioni del trasferimento
+            e applicare le garanzie previste dal GDPR, quando necessarie.
+          </p>
+          <p>
+            Questa sezione deve essere adeguata ai fornitori e ai servizi
+            effettivamente utilizzati dal sito.
+          </p>
+        </section>
+
+        <!-- 9 -->
+        <section class="pp-section" id="diritti">
+          <h2>9. Diritti dell'interessato</h2>
+          <p>
+            Nei casi previsti dal GDPR, l'interessato può esercitare i seguenti
+            diritti:
+          </p>
+          <ul>
+            <li>ottenere conferma che sia o meno in corso un trattamento di dati personali;</li>
+            <li>accedere ai propri dati personali;</li>
+            <li>chiedere la rettifica dei dati inesatti;</li>
+            <li>chiedere la cancellazione dei dati, quando ne ricorrono i presupposti;</li>
+            <li>ottenere la limitazione del trattamento, nei casi previsti;</li>
+            <li>opporsi al trattamento, quando consentito dalla normativa;</li>
+            <li>richiedere la portabilità dei dati, ove applicabile;</li>
+            <li>revocare il consenso precedentemente prestato, quando il trattamento si basa sul consenso;</li>
+            <li>proporre reclamo al Garante per la protezione dei dati personali.</li>
+          </ul>
+          <p>
+            Per esercitare i propri diritti, l'interessato può utilizzare
+            i recapiti del titolare indicati in questa informativa.
+            Il titolare risponderà nei termini e secondo le modalità previste
+            dalla normativa applicabile.
+          </p>
+          <p>
+            Sito ufficiale dell'autorità italiana:
+            <a href="https://www.garanteprivacy.it/" target="_blank" rel="noopener noreferrer">
+              Garante per la protezione dei dati personali
+            </a>.
+          </p>
+        </section>
+
+        <!-- 10 -->
+        <section class="pp-section" id="sicurezza">
+          <h2>10. Sicurezza del sito</h2>
+          <p>
+            Il titolare si impegna a proteggere i dati personali attraverso
+            misure tecniche e organizzative adeguate. Nessun sistema di
+            trasmissione o archiviazione può tuttavia garantire una sicurezza
+            assoluta.
+          </p>
+          <p>
+            Gli utenti sono invitati a non inviare tramite il sito informazioni
+            non necessarie o dati personali particolarmente delicati.
+          </p>
+        </section>
+
+        <!-- 11 -->
+        <section class="pp-section" id="minori">
+          <h2>11. Dati personali dei minori</h2>
+          <p>
+            Il sito è destinato principalmente a persone che richiedono
+            informazioni sui servizi e sull'organizzazione di eventi.
+            Eventuali dati relativi a minori devono essere trattati con
+            particolare attenzione e nel rispetto della normativa applicabile.
+          </p>
+          <p>
+            Gli utenti sono invitati a non inserire nei messaggi dati personali
+            di minori che non siano necessari per gestire la richiesta.
+          </p>
+        </section>
+
+        <!-- 12 -->
+        <section class="pp-section" id="modifiche">
+          <h2>12. Modifiche a questa informativa</h2>
+          <p>
+            La presente informativa può essere aggiornata per riflettere
+            modifiche al sito, ai servizi utilizzati o alla normativa applicabile.
+            La versione pubblicata su questa pagina è quella da consultare.
+          </p>
+          <p>
+            In caso di modifiche rilevanti, saranno adottate le modalità
+            informative richieste dalla normativa applicabile.
+          </p>
+        </section>
+
+        <!-- CONTATTI -->
+        <section class="pp-contact" id="contatti">
+          <h2>13. Contatti per la privacy</h2>
+          <p>
+            Per richieste relative al trattamento dei dati personali o per
+            esercitare i diritti previsti dal GDPR, contatta il titolare
+            utilizzando i recapiti ufficiali indicati nella sezione
+            <a href="#titolare">Titolare del trattamento</a>.
+          </p>
+          <p>
+            Prima della pubblicazione, assicurati che i recapiti siano
+            corretti e che siano effettivamente gestiti dal titolare.
+          </p>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="pp-footer">
+      <div class="pp-container pp-footer-inner">
+        <div>
+          <strong>Milano Animazione</strong>
+          <div>Informazioni e intrattenimento per i tuoi eventi.</div>
+        </div>
+
+        <nav class="pp-footer-links" aria-label="Link utili">
+          <a href="../index.html">Home</a>
+          <a href="../chi-siamo/index.html">Chi siamo</a>
+          <a href="../contatti/index.html">Contatti</a>
+          <a href="../cookie-policy/index.html">Cookie Policy</a>
+        </nav>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
+```

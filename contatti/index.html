@@ -1,1 +1,624 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Milano Animazione</title><meta name="robots" content="noindex"><link rel="stylesheet" href="../assets/css/style.css"></head><body><main class="section"><div class="container center"><p class="eyebrow">Milano Animazione</p><h1>Pagina in costruzione</h1><p>Questa pagina è predisposta per il contenuto definitivo.</p><a class="btn btn-primary" href="/">Torna alla Home</a></div></main></body></html>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contatti | Milano Animazione</title>
+  <meta name="description" content="Contatta Milano Animazione per informazioni e preventivi su feste di compleanno, animazione per bambini, spettacoli di magia ed eventi.">
+
+  <link rel="canonical" href="https://milanoanimazione.it/contatti/">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .contact-page {
+      --pink: #ff3f7f;
+      --dark: #191725;
+      --text: #625d70;
+      --light: #f8f5fb;
+      color: var(--dark);
+      font-family: Arial, Helvetica, sans-serif;
+      overflow: hidden;
+    }
+
+    .contact-page * {
+      box-sizing: border-box;
+    }
+
+    .contact-container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .contact-hero {
+      padding: 76px 0 70px;
+      background:
+        radial-gradient(ellipse at 90% 10%, #ffe1ed, transparent 38%),
+        linear-gradient(135deg, #fcf9ff, #fff);
+    }
+
+    .contact-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr .85fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .contact-eyebrow {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: var(--pink);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .contact-page h1,
+    .contact-page h2,
+    .contact-page h3 {
+      color: var(--dark);
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+
+    .contact-page h1 {
+      margin: 0 0 22px;
+      font-size: clamp(40px, 5vw, 62px);
+    }
+
+    .contact-page h2 {
+      margin: 0 0 18px;
+      font-size: clamp(29px, 4vw, 42px);
+    }
+
+    .contact-highlight {
+      color: var(--pink);
+    }
+
+    .contact-page p {
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .contact-hero-copy p {
+      max-width: 570px;
+    }
+
+    .contact-hero-image img {
+      display: block;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: 0 20px 55px #24152c17;
+    }
+
+    .contact-main {
+      padding: 76px 0;
+      background: var(--light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      align-items: start;
+      gap: 30px;
+    }
+
+    .contact-info {
+      padding: 34px;
+      border-radius: 24px;
+      background: var(--dark);
+      color: #fff;
+    }
+
+    .contact-info h2 {
+      color: #fff;
+      font-size: 30px;
+    }
+
+    .contact-info > p {
+      color: #ded8e8;
+      font-size: 15px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-top: 28px;
+    }
+
+    .contact-info-icon {
+      display: grid;
+      flex: 0 0 44px;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #ffffff17;
+      color: #ff8fb4;
+      font-size: 21px;
+    }
+
+    .contact-info-item strong {
+      display: block;
+      margin: 2px 0 6px;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .contact-info-item span,
+    .contact-info-item a {
+      color: #ded8e8;
+      font-size: 14px;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-info-item a:hover {
+      color: #fff;
+    }
+
+    .contact-form-card {
+      padding: 38px;
+      border: 1px solid #eee7f2;
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 15px 45px #21132b08;
+    }
+
+    .contact-form-card h2 {
+      font-size: 30px;
+    }
+
+    .contact-form-card > p {
+      margin-bottom: 26px;
+      font-size: 14px;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 19px;
+    }
+
+    .contact-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .contact-field-full {
+      grid-column: 1 / -1;
+    }
+
+    .contact-field label {
+      color: var(--dark);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .contact-field input,
+    .contact-field select,
+    .contact-field textarea {
+      width: 100%;
+      min-height: 49px;
+      padding: 13px 14px;
+      border: 1px solid #e5deeb;
+      border-radius: 12px;
+      outline: none;
+      background: #fff;
+      color: var(--dark);
+      font: inherit;
+      font-size: 14px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .contact-field textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    .contact-field input:focus,
+    .contact-field select:focus,
+    .contact-field textarea:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 0 3px #ff3f7f1b;
+    }
+
+    .contact-privacy {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--text);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .contact-privacy input {
+      flex: 0 0 auto;
+      margin-top: 4px;
+      accent-color: var(--pink);
+    }
+
+    .contact-privacy a {
+      color: var(--pink);
+    }
+
+    .contact-submit {
+      min-height: 52px;
+      padding: 14px 22px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--pink);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+
+    .contact-submit:hover {
+      transform: translateY(-2px);
+      background: #e92c6b;
+    }
+
+    .contact-note {
+      margin: 0;
+      color: #777083;
+      font-size: 12px !important;
+      line-height: 1.6 !important;
+    }
+
+    .contact-bottom {
+      padding: 65px 0;
+      text-align: center;
+    }
+
+    .contact-bottom p {
+      max-width: 650px;
+      margin: 0 auto 24px;
+    }
+
+    .contact-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      background: var(--pink);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-button:hover {
+      background: #e92c6b;
+      color: #fff;
+    }
+
+    .contact-footer {
+      padding: 25px 0;
+      background: #13111d;
+      color: #eee8f4;
+      text-align: center;
+    }
+
+    .contact-footer p {
+      margin: 0;
+      color: #eee8f4;
+      font-size: 13px;
+    }
+
+    .contact-footer a {
+      color: #fff;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 850px) {
+      .contact-hero-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-hero {
+        padding: 55px 0;
+      }
+
+      .contact-hero-image img {
+        height: 340px;
+      }
+
+      .contact-info {
+        order: 2;
+      }
+
+      .contact-form-card {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .contact-container {
+        width: calc(100% - 32px);
+      }
+
+      .contact-page h1 {
+        font-size: 41px;
+      }
+
+      .contact-main {
+        padding: 48px 0;
+      }
+
+      .contact-form-card,
+      .contact-info {
+        padding: 24px;
+      }
+
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-field-full {
+        grid-column: auto;
+      }
+
+      .contact-hero-image img {
+        height: 280px;
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="contact-page">
+
+    <!-- INTRODUZIONE -->
+    <section class="contact-hero">
+      <div class="contact-container contact-hero-grid">
+
+        <div class="contact-hero-copy">
+          <span class="contact-eyebrow">Contattaci</span>
+
+          <h1>
+            La tua prossima festa
+            <span class="contact-highlight">inizia da qui.</span>
+          </h1>
+
+          <p>
+            Stai organizzando un compleanno, uno spettacolo di magia
+            o un evento speciale? Raccontaci la tua idea: potremo
+            valutare insieme le attività più adatte alla tua occasione.
+          </p>
+
+          <p>
+            Compila il modulo con le informazioni che hai già a
+            disposizione. Ti aiuteranno a descrivere meglio la tua richiesta.
+          </p>
+        </div>
+
+        <div class="contact-hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1100&q=85"
+            alt="Decorazioni colorate per una festa"
+            fetchpriority="high"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MODULO E RECAPITI -->
+    <section class="contact-main">
+      <div class="contact-container contact-grid">
+
+        <aside class="contact-info">
+          <span class="contact-eyebrow">Restiamo in contatto</span>
+
+          <h2>Parliamo della tua idea.</h2>
+
+          <p>
+            Per organizzare al meglio la richiesta, indicaci il tipo
+            di evento, la data prevista e il luogo in cui si svolgerà.
+          </p>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">✉</div>
+            <div>
+              <strong>Email</strong>
+              <span>Inserisci qui il tuo indirizzo email ufficiale</span>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">☎</div>
+            <div>
+              <strong>Telefono</strong>
+              <span>Inserisci qui il tuo numero di telefono</span>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">⌖</div>
+            <div>
+              <strong>Zona dei servizi</strong>
+              <span>Milano e dintorni, da confermare in base all'evento</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="contact-form-card">
+          <h2>Richiedi informazioni</h2>
+
+          <p>
+            Compila i campi qui sotto. I campi contrassegnati con *
+            sono obbligatori.
+          </p>
+
+          <form class="contact-form" id="contact-form" action="#" method="post">
+
+            <div class="contact-field">
+              <label for="nome">Nome e cognome *</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                autocomplete="name"
+                placeholder="Il tuo nome"
+                required
+              >
+            </div>
+
+            <div class="contact-field">
+              <label for="email">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="nome@esempio.it"
+                required
+              >
+            </div>
+
+            <div class="contact-field">
+              <label for="telefono">Telefono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                autocomplete="tel"
+                placeholder="Il tuo numero"
+              >
+            </div>
+
+            <div class="contact-field">
+              <label for="evento">Tipo di evento *</label>
+              <select id="evento" name="evento" required>
+                <option value="">Seleziona un'opzione</option>
+                <option value="Compleanno bambini">Compleanno per bambini</option>
+                <option value="Animazione bambini">Animazione per bambini</option>
+                <option value="Spettacolo di magia">Spettacolo di magia</option>
+                <option value="Bolle di sapone">Spettacolo di bolle di sapone</option>
+                <option value="Baby dance">Baby dance</option>
+                <option value="Truccabimbi">Truccabimbi</option>
+                <option value="Evento per adulti">Evento per adulti</option>
+                <option value="Altro">Altro</option>
+              </select>
+            </div>
+
+            <div class="contact-field">
+              <label for="data-evento">Data dell'evento</label>
+              <input type="date" id="data-evento" name="data_evento">
+            </div>
+
+            <div class="contact-field">
+              <label for="luogo">Luogo dell'evento</label>
+              <input
+                type="text"
+                id="luogo"
+                name="luogo"
+                placeholder="Città o zona"
+              >
+            </div>
+
+            <div class="contact-field contact-field-full">
+              <label for="messaggio">Parlaci della tua idea *</label>
+              <textarea
+                id="messaggio"
+                name="messaggio"
+                placeholder="Descrivi la festa, l'età dei partecipanti e le attività che ti interessano..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="contact-field contact-field-full">
+              <label class="contact-privacy" for="privacy">
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <span>
+                  Ho letto l'<a href="../privacy-policy/index.html" target="_blank" rel="noopener">informativa sulla privacy</a>
+                  e acconsento al trattamento dei dati per la gestione
+                  della mia richiesta. *
+                </span>
+              </label>
+            </div>
+
+            <div class="contact-field contact-field-full">
+              <button type="submit" class="contact-submit">
+                Invia la richiesta ↗
+              </button>
+
+              <p class="contact-note">
+                Il modulo non è ancora collegato a un servizio di invio.
+                Non invierà messaggi finché non configureremo il sistema.
+              </p>
+
+              <p id="contact-status" role="status" aria-live="polite" hidden></p>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INVITO FINALE -->
+    <section class="contact-bottom">
+      <div class="contact-container">
+        <span class="contact-eyebrow">Milano Animazione</span>
+
+        <h2>Ogni evento ha una storia da raccontare.</h2>
+
+        <p>
+          Scopri le nostre proposte e trova l'ispirazione per
+          organizzare un momento speciale.
+        </p>
+
+        <a class="contact-button" href="../feste-compleanno/index.html">
+          Scopri le feste di compleanno ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="contact-footer">
+      <div class="contact-container">
+        <p>
+          © <span id="contact-year"></span> Milano Animazione
+          · <a href="../index.html">Home</a>
+          · <a href="../chi-siamo/index.html">Chi siamo</a>
+          · <a href="../privacy-policy/index.html">Privacy Policy</a>
+          · <a href="../cookie-policy/index.html">Cookie Policy</a>
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("contact-year").textContent =
+      new Date().getFullYear();
+
+    const contactForm = document.getElementById("contact-form");
+    const contactStatus = document.getElementById("contact-status");
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      contactStatus.hidden = false;
+      contactStatus.textContent =
+        "Il modulo non è ancora attivo: la richiesta non è stata inviata. Contatta il gestore del sito per configurare il servizio di invio.";
+      contactStatus.style.color = "#b42318";
+    });
+  </script>
+</body>
+</html>

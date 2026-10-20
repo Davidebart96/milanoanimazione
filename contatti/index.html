@@ -464,7 +464,18 @@
             sono obbligatori.
           </p>
 
-          <form class="contact-form" id="contact-form" action="#" method="post">
+          
+<form
+  class="contact-form"
+  id="contact-form"
+  action="https://formsubmit.co/info@milanoanimazione.it"
+  method="POST"
+>
+  <input type="hidden" name="_subject" value="Nuova richiesta dal sito Milano Animazione">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="true">
+  <input type="hidden" name="_next" value="https://milanoanimazione.it/contatti/?inviato=1">
+
 
             <div class="contact-field">
               <label for="nome">Nome e cognome *</label>
@@ -558,9 +569,9 @@
               </button>
 
               <p class="contact-note">
-                Il modulo non è ancora collegato a un servizio di invio.
-                Non invierà messaggi finché non configureremo il sistema.
-              </p>
+  Dopo l'invio, la richiesta sarà inoltrata al servizio di gestione
+  delle email. Non inviare dati non necessari alla tua richiesta.
+</p>
 
               <p id="contact-status" role="status" aria-live="polite" hidden></p>
             </div>

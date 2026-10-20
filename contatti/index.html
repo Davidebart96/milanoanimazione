@@ -231,24 +231,39 @@
       box-shadow: 0 0 0 3px #ff3f7f1b;
     }
 
-    .contact-privacy {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      color: var(--text);
-      font-size: 12px;
-      line-height: 1.7;
-    }
+   
+.contact-privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.7;
+}
 
-    .contact-privacy input {
-      flex: 0 0 auto;
-      margin-top: 4px;
-      accent-color: var(--pink);
-    }
+.contact-privacy input {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  accent-color: var(--pink);
+  cursor: pointer;
+}
 
-    .contact-privacy a {
-      color: var(--pink);
-    }
+.contact-privacy span {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.contact-privacy a {
+  color: var(--pink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 
     .contact-submit {
       min-height: 52px;
@@ -615,21 +630,30 @@
 
   </main>
 
-  <script>
-    document.getElementById("contact-year").textContent =
-      new Date().getFullYear();
 
-    const contactForm = document.getElementById("contact-form");
-    const contactStatus = document.getElementById("contact-status");
+<script>
+  document.getElementById("contact-year").textContent =
+    new Date().getFullYear();
 
+  const contactForm = document.getElementById("contact-form");
+
+  if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+      const privacyCheckbox = document.getElementById("privacy");
 
-      contactStatus.hidden = false;
-      contactStatus.textContent =
-        "Il modulo non è ancora attivo: la richiesta non è stata inviata. Contatta il gestore del sito per configurare il servizio di invio.";
-      contactStatus.style.color = "#b42318";
+      if (!privacyCheckbox || !privacyCheckbox.checked) {
+        event.preventDefault();
+        alert("Per inviare la richiesta, devi accettare l'informativa privacy.");
+        return;
+      }
+
+      // Non bloccare l'invio:
+      // il browser invierà il modulo all'indirizzo indicato nell'attributo action.
     });
-  </script>
+  }
+</script>
+</body>
+</html>
+
 </body>
 </html>
